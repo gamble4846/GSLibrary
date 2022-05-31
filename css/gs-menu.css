@@ -30,7 +30,7 @@
 .gs-menu .gs-menu-left-container .gs-menu-items .gs-menu-active::before{
     content: "";
     position: absolute;
-    height: 5px;
+    height: 3px;
     width: calc(100% - 20px) ;
     color: var(--activeLinkLineColor);
     background-color: var(--activeLinkLineColor);
