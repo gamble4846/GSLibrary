@@ -1,0 +1,9 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.Content-Example{
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
