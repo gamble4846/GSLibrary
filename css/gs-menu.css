@@ -19,6 +19,7 @@
     top: 0;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .gs-menu .gs-menu-left-container .gs-menu-items .gs-menu-active{
@@ -57,16 +58,17 @@
 }
 
 .gs-menu .gs-menu-mobile-view{
-    padding-top: var(--menuHeight);
-    height: 100vh;
+    height: calc(100vh);
     position: fixed;
     right: calc(var(--mobileMenuWidth) - (var(--mobileMenuWidth) + var(--mobileMenuWidth) + 60px));
     z-index: -1;
+    bottom: 0;
     transition: .35s ease-in-out;
 }
 
 .gs-menu .gs-menu-mobile-view .gs-menu-items{
     width: var(--mobileMenuWidth);
+    padding-top: var(--menuHeight);
 }
 
 .gs-menu .gs-menu-mobile-view .gs-menu-mobile-exit-click{

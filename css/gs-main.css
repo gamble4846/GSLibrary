@@ -5,5 +5,9 @@ body{
 
 .Content-Example{
     min-height: 100vh;
-    background-color: antiquewhite;
+}
+
+.codeContainer{
+    max-width: 100%;
+    padding: 30px;
 }
