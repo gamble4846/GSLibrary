@@ -1,0 +1,46 @@
+:root {
+  --checkboxSize-gs-checkbox: 20px;
+  --uncheckedBackgroundColor-gs-checkbox: #FE0006;
+  --uncheckedContent-gs-checkbox: "✖";
+  --checkedContent-gs-checkbox: "✔";
+  --checkedBackgroundColor-gs-checkbox: #0E9700;
+  --checkFontColor-gs-checkbox: white;
+  --tansitionTime-gs-checkbox: 0.5s
+}
+
+.gs-check {
+  -webkit-appearance: none;
+  height: var(--checkboxSize-gs-checkbox);
+  width: var(--checkboxSize-gs-checkbox);
+  position: relative;
+  transition: var(--tansitionTime-gs-checkbox);
+  background-color: var(--uncheckedBackgroundColor-gs-checkbox);
+  text-align: center;
+  font-weight: 600;
+  color: var(--checkFontColor-gs-checkbox);
+  border-radius: calc(var(--checkboxSize-gs-checkbox)/4);
+  outline: none;
+}
+
+.gs-check:checked {
+  background-color: var(--checkedBackgroundColor-gs-checkbox);
+}
+
+.gs-check:before {
+  content: var(--uncheckedContent-gs-checkbox);
+  font-size: calc(((var(--checkboxSize-gs-checkbox)/2) + (var(--checkboxSize-gs-checkbox)/5)));
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.gs-check:checked:before {
+  content: var(--checkedContent-gs-checkbox);
+}
+
+.gs-check:hover {
+  cursor: pointer; 
+  opacity: 0.8;
+}
