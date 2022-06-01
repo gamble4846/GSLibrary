@@ -1,0 +1,31 @@
+:root{
+    --button-font-size-gs-minimalist-buttons: 20px;
+    --button-fill-color-gs-minimalist-buttons: rgb(28, 31, 30);
+}
+
+.gs-minimalist-button{
+    position: relative;
+    display: inline-block;
+    border: 1px solid black !important;
+    padding: 0; 
+    background-color: transparent;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    padding: calc(var(--button-font-size-gs-minimalist-buttons) / 3) calc(var(--button-font-size-gs-minimalist-buttons) / 2);
+}
+
+.gs-minimalist-button .gs-minimalist-button-text{
+    position: relative;
+    display: inline-block;
+    font-size: var(--button-font-size-gs-minimalist-buttons);
+    letter-spacing: calc(var(--button-font-size-gs-minimalist-buttons) / 10);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.gs-minimalist-button.gs-minimalist-button-filled{
+    background-color: var(--button-fill-color-gs-minimalist-buttons);
+}
