@@ -10,9 +10,11 @@
     --card-header-font-size-gs-blur-cards: 1.5rem;
     --card-over-header-font-size-gs-blur-cards: 0.9rem;
     --card-container-padding-gs-blur-cards: 30px;
-    --card-scroll-thumb-color: #1b1b1b;
-    --card-scroll-thumb-hover-color: #141414;
-    --card-on-hover-border-size: 3px
+    --card-scroll-thumb-color-gs-blur-cards: #1b1b1b;
+    --card-scroll-thumb-hover-color-gs-blur-cards: #141414;
+    --card-on-hover-border-size-gs-blur-cards: 3px;
+    --card-data-text-shadow-gs-blur-cards: black 1px 0 10px;
+    --card-border-radius-gs-blur-cards: 10px;
 }
 
 
@@ -44,7 +46,7 @@
     min-height: var(--card-min-height-gs-blur-cards);
     height: 40vw;
     max-height: var(--card-max-height-gs-blur-cards);
-    border-radius: 10px;
+    border-radius: var(--card-border-radius-gs-blur-cards);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -66,7 +68,7 @@
     font-size: var(--card-header-font-size-gs-blur-cards);
     line-height: 1.4;
     font-weight: bold;
-    text-shadow: black 1px 0 10px;
+    text-shadow: var(--card-data-text-shadow-gs-blur-cards);
 }
 
 .gs-cards-container .gs-cards-grid .gs-card .gs-card-data .gs-card-over-header{
@@ -74,7 +76,7 @@
     font-size: var(--card-over-header-font-size-gs-blur-cards);
     margin-bottom: var(--spacing-s);
     text-transform: uppercase;
-    text-shadow: black 1px 0 10px;
+    text-shadow: var(--card-data-text-shadow-gs-blur-cards);
 }
 
 .gs-cards-container .gs-cards-grid .gs-card:hover{
@@ -103,7 +105,7 @@
     opacity: 0;
     height: 0;
     overflow: hidden;
-    text-shadow: black 1px 0 10px;
+    text-shadow: var(--card-data-text-shadow-gs-blur-cards);
 }
 
 .gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar {
@@ -117,10 +119,10 @@
 }
 
 .gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar-thumb {
-    background: var(--card-scroll-thumb-color);
+    background: var(--card-scroll-thumb-color-gs-blur-cards);
     border-radius: 5px;
 }
 
 .gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar-thumb:hover {
-    background: var(--card-scroll-thumb-hover-color); 
+    background: var(--card-scroll-thumb-hover-color-gs-blur-cards); 
 }
