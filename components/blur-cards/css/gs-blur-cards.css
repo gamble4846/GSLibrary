@@ -1,0 +1,126 @@
+:root {
+    --cards-column-gap-gs-blur-cards: 24px;
+    --cards-row-gap-gs-blur-cards: 24px;
+    --card-max-height-gs-blur-cards: 500px;
+    --card-min-height-gs-blur-cards: 200px;
+    --card-over-header-color-gs-blur-cards: rgba(255,255,255,0.6);
+    --card-header-color-gs-blur-cards: rgba(255,255,255,0.9);
+    --card-content-color-gs-blur-cards: white;
+    --card-hover-transition-speed-gs-blur-cards: 0.3s;
+    --card-header-font-size-gs-blur-cards: 1.5rem;
+    --card-over-header-font-size-gs-blur-cards: 0.9rem;
+    --card-container-padding-gs-blur-cards: 30px;
+    --card-scroll-thumb-color: #1b1b1b;
+    --card-scroll-thumb-hover-color: #141414;
+    --card-on-hover-border-size: 3px
+}
+
+
+.gs-cards-container{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    padding: var(--card-container-padding-gs-blur-cards);
+}
+
+.gs-cards-container .gs-cards-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--cards-column-gap-gs-blur-cards);
+    grid-row-gap: var(--cards-row-gap-gs-blur-cards);
+    max-width: 100%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px)  { .gs-cards-container .gs-cards-grid{grid-template-columns: repeat(2, 1fr);} }
+@media only screen and (min-width: 540px)  { .gs-cards-container .gs-cards-grid{grid-template-columns: repeat(3, 1fr);} }
+@media only screen and (min-width: 800px)  { .gs-cards-container .gs-cards-grid{grid-template-columns: repeat(4, 1fr);} }
+@media only screen and (min-width: 1024px) { .gs-cards-container .gs-cards-grid{grid-template-columns: repeat(5, 1fr);} }
+@media only screen and (min-width: 1900px) { .gs-cards-container .gs-cards-grid{grid-template-columns: repeat(6, 1fr);} }
+
+.gs-cards-container .gs-cards-grid .gs-card{
+    display: block;
+    width: 100%;
+    min-height: var(--card-min-height-gs-blur-cards);
+    height: 40vw;
+    max-height: var(--card-max-height-gs-blur-cards);
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: var(--card-hover-transition-speed-gs-blur-cards);
+    position: relative;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data{
+    width: 90%;
+    height: 95%;
+    padding: 5%;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data .gs-card-header{
+    color: var(--card-header-color-gs-blur-cards);
+    font-size: var(--card-header-font-size-gs-blur-cards);
+    line-height: 1.4;
+    font-weight: bold;
+    text-shadow: black 1px 0 10px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data .gs-card-over-header{
+    color: var(--card-over-header-color-gs-blur-cards);
+    font-size: var(--card-over-header-font-size-gs-blur-cards);
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+    text-shadow: black 1px 0 10px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card:hover{
+    transform: scale(1.05) translateZ(0);
+}
+
+.gs-cards-container .gs-cards-grid .gs-card:hover > .gs-card-data{
+    background-color: #00000075;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card.gs-card-blured{
+    filter: blur(5px);
+}
+
+.gs-cards-container .gs-cards-grid .gs-card:hover > .gs-card-data .gs-card-content{
+    opacity: 1;
+    height: auto;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data .gs-card-content{
+    color: var(--card-content-color-gs-blur-cards);
+    word-wrap: break-word;
+    width: 85%;
+    padding-top: 10px;
+    transition: opacity var(--card-hover-transition-speed-gs-blur-cards) ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    text-shadow: black 1px 0 10px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 5px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar-thumb {
+    background: var(--card-scroll-thumb-color);
+    border-radius: 5px;
+}
+
+.gs-cards-container .gs-cards-grid .gs-card .gs-card-data::-webkit-scrollbar-thumb:hover {
+    background: var(--card-scroll-thumb-hover-color); 
+}

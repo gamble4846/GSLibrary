@@ -16,3 +16,9 @@ body{
 .padding-20px{
     padding: 20px;
 }
+
+.blur-cards-body{
+    background-image: linear-gradient(to right, #0f4667, #2a6973);
+    padding: 30px;
+}
+
