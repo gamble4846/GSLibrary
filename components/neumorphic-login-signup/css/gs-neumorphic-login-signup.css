@@ -2,13 +2,15 @@
     --lightGrey-gs-neumorphic-login-signup: #c8d0e7;
     --lightGrey2-gs-neumorphic-login-signup: #e4ebf5;
     --header-colors-gs-neumorphic-login-signup: #6D78FA;
-    --header-font-size-gs-neumorphic-login-signup: 18px;
+    --header-font-size-gs-neumorphic-login-signup: 25px;
     --header-scale-open-gs-neumorphic-login-signup: 1.5;
     --card-open-close-tansition-time-gs-neumorphic-login-signup: 1s;
     --form-input-border-radius-gs-neumorphic-login-signup: 5px;
-    --form-input-padding-gs-neumorphic-login-signup: 5px;
+    --form-input-padding-gs-neumorphic-login-signup: 10px;
+    --form-input-font-size-gs-neumorphic-login-signup: 15px;
     --form-input-font-color--gs-neumorphic-login-signup: #9baacf;
-    --form-input-margin-gs-neumorphic-login-signup: 5px;
+    --form-input-margin-gs-neumorphic-login-signup: 15px;
+    --form-input-max-width-gs-neumorphic-login-signup: 300px;
 }
 
 .gs-neumorphic-main-card-outer-container{
@@ -98,9 +100,11 @@
     box-shadow: inset 0.1rem 0.1rem 0.3rem var(--lightGrey-gs-neumorphic-login-signup),
     inset -0.1rem -0.1rem 0.3rem white;
     background: none;
-    font-family: inherit;
     color: var(--form-input-font-color--gs-neumorphic-login-signup);
-    margin: var(--form-input-margin-gs-neumorphic-login-signup);
+    margin: var(--form-input-margin-gs-neumorphic-login-signup) auto;
+    font-size: var(--form-input-font-size-gs-neumorphic-login-signup);
+    max-width: var(--form-input-max-width-gs-neumorphic-login-signup);
+    display: block;
 }
 
 .gs-neumorphic-main-card-container .gs-neumorphic-main-card .gs-neumorphic-form-container .gs-neumorphic-input::placeholder{
@@ -140,6 +144,7 @@
     transition: var(--card-open-close-tansition-time-gs-neumorphic-login-signup) ease;
     color: var(--form-input-font-color--gs-neumorphic-login-signup);
     background-color: var(--lightGrey2-gs-neumorphic-login-signup);
+    font-size: var(--form-input-font-size-gs-neumorphic-login-signup);
 }
 
 .gs-neumorphic-main-card-container .gs-neumorphic-main-card .gs-neumorphic-form-container .gs-neumorphic-button:hover{
