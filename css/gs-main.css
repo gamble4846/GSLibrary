@@ -22,3 +22,8 @@ body{
     padding: 30px;
 }
 
+.neumorphic-login-signup-body{
+    background-color: #e4ebf5;
+    min-height: 100vh;
+}
+
