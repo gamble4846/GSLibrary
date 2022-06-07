@@ -100,6 +100,7 @@
 
 @media only screen and (min-width: 320px)  { .gs-product-grid-view-container .gs-product-grid-grid-div .gs-product-card .gs-product-card-content .gs-product-card-detail { display: block;} }
 @media only screen and (min-width: 540px)  { .gs-product-grid-view-container .gs-product-grid-grid-div .gs-product-card .gs-product-card-content .gs-product-card-detail { display: block;} }
+@media only screen and (min-width: 800px)  { .gs-product-grid-view-container .gs-product-grid-grid-div .gs-product-card .gs-product-card-content .gs-product-card-detail { display: flex;} }
 
 .gs-product-grid-view-container .gs-product-grid-grid-div .gs-product-card .gs-product-card-content .gs-product-card-detail .gs-product-card-detail-title{
     color: var(--product-card-detail-title-color-gs-product-grid-view);
