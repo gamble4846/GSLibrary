@@ -57,6 +57,7 @@
     border-radius: 60% / 10%;
     box-shadow: 0rem 0rem 1rem var(--lightGrey-gs-neumorphic-login-signup), 0rem 0rem 1rem #ffffff;
     background-color: var(--lightGrey2-gs-neumorphic-login-signup);
+    z-index: 3;
 }
 
 .gs-neumorphic-main-card-container .gs-neumorphic-main-card .gs-neumorphic-login.gs-open{
@@ -136,6 +137,7 @@
     width: max-content;
     padding: var(--form-input-padding-gs-neumorphic-login-signup) calc(var(--form-input-padding-gs-neumorphic-login-signup) * 2.5);
     margin-top: var(--form-input-margin-gs-neumorphic-login-signup);
+    margin-bottom: var(--form-input-margin-gs-neumorphic-login-signup);
     border: none;
     border-radius: var(--form-input-border-radius-gs-neumorphic-login-signup);
     box-shadow: 0.3rem 0.3rem 0.6rem var(--lightGrey-gs-neumorphic-login-signup),
