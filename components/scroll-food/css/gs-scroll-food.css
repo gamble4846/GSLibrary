@@ -83,6 +83,8 @@
     background-color: white;
 }
 
+
+
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left,
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right{
     position: relative;
@@ -246,6 +248,41 @@
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     z-index: 2;
+}
+
+.gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right .gs-circle-arrow-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right .gs-circle-arrow-container .gs-circle-arrow{
+    fill: white;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left .gs-circle-arrow-container .gs-circle-arrow{
+    fill: white;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(180deg);
+    cursor: pointer;
+    display: none;
 }
 
 .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left.gs-opp-0{
@@ -424,6 +461,11 @@
         margin-bottom: auto;
         position: absolute;
         z-index: 5;
+    }
+
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left .gs-circle-arrow-container .gs-circle-arrow,
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right .gs-circle-arrow-container .gs-circle-arrow{
+        display: block;
     }
 }
 

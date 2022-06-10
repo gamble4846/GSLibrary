@@ -4,6 +4,8 @@ var pageDivs = document.getElementsByClassName("gs-page");
 var circleTopRights = document.getElementsByClassName("gs-circle-top-right");
 var circleBottomLefts = document.getElementsByClassName("gs-circle-bottom-left");
 var pageDataTitles = document.getElementsByClassName("gs-page-data-title-container");
+var goLeftButtons = document.querySelectorAll(".gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left .gs-circle-arrow-container .gs-circle-arrow");
+var goRightButtons = document.querySelectorAll(".gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right .gs-circle-arrow-container .gs-circle-arrow");
 
 var pages = container.children[0].children;
 var noOfPages = container.children[0].children.length;
@@ -36,6 +38,28 @@ for (let index = 0; index < pageLinks.length; index++) {
         totalScroll = parseInt(pageLink.getAttribute("data-target")) * scrollValuePerPage - 100;
         updatePage();
         pageLink.classList.add("gs-active");
+    });
+}
+
+for (let index = 0; index < goLeftButtons.length; index++) {
+    const goLeftButton = goLeftButtons[index];
+    const goRightButton = goRightButtons[index];
+    goLeftButton.addEventListener("click", function(){
+        if(totalScroll >= 0)
+            totalScroll -= scrollValuePerPage;
+        if(totalScroll < 0)
+            totalScroll = 0;
+
+        updatePage();
+    });
+
+    goRightButton.addEventListener("click", function(){
+        if(totalScroll < noOfPages * scrollValuePerPage)
+            totalScroll += scrollValuePerPage;
+        if(totalScroll == noOfPages * scrollValuePerPage)
+            totalScroll = (noOfPages * scrollValuePerPage) - (scrollValuePerPage);
+        
+        updatePage();
     });
 }
 
@@ -144,9 +168,8 @@ function handleTouchMove(evt) {
             if(totalScroll >= 0)
                 totalScroll -= scrollValuePerPage;
             if(totalScroll < 0)
-            totalScroll = 0;
+                totalScroll = 0;
         }
-        console.log(totalScroll);
         updatePage();                
     } else {
         if ( yDiff > 0 ) {
