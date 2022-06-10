@@ -15,7 +15,7 @@ var totalScroll = 0;
 
 container.addEventListener("wheel", event => {
     if(totalScroll >= 0){
-        if(totalScroll < noOfPages * scrollValuePerPage){
+        if(totalScroll <= noOfPages * scrollValuePerPage){
             totalScroll += event.deltaY;
             updatePage();
         }

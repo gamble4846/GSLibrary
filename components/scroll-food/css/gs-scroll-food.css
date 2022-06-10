@@ -430,9 +430,16 @@
 
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-follow,
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down,
-    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line,
-    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-text-container{
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line{
         display: none;
+    }
+
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-text-container{
+        width: 80%;
+        font-size: 3vw;
+        position: absolute;
+        line-height: 4vw;
+        text-align: center;
     }
 
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in{
