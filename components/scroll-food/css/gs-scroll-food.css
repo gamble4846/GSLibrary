@@ -106,10 +106,6 @@
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down{
-    text-transform: uppercase;
-}
-
-.gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down{
     display: flex;
     align-items: center;
     font-weight: bolder;
@@ -117,6 +113,18 @@
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down .gs-scroll-in{
+    padding-left: 0.5vw;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-swipe-next{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: none;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-swipe-next .gs-swipe-in{
     padding-left: 0.5vw;
 }
 
@@ -369,8 +377,16 @@
         transform: scale(3);
     }
 
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-swipe-next{
+        display: flex;
+    }
+
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-swipe-next .gs-swipe-in .gs-swipe-svgs{
+        transform: scale(2);
+    }
+
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-follow,
-    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right,
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down,
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line,
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-text-container{
         display: none;
