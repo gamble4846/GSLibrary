@@ -56,7 +56,7 @@ for (let index = 0; index < goLeftButtons.length; index++) {
     goRightButton.addEventListener("click", function(){
         if(totalScroll < noOfPages * scrollValuePerPage)
             totalScroll += scrollValuePerPage;
-        if(totalScroll == noOfPages * scrollValuePerPage)
+        if(totalScroll >= noOfPages * scrollValuePerPage)
             totalScroll = (noOfPages * scrollValuePerPage) - (scrollValuePerPage);
         
         updatePage();
