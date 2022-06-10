@@ -82,6 +82,11 @@
     font-size: 1vw;
 }
 
+.gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left,
+.gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right{
+    position: relative;
+}
+
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social{
     display: flex;
     align-items: center;
