@@ -1,8 +1,10 @@
 var container = document.getElementById("gs-scroll-food-container");
 var pageLinks = document.getElementsByClassName("gs-page-number");
 var pageDivs = document.getElementsByClassName("gs-page");
-var circleTopRight = document.getElementsByClassName("gs-circle-top-right")[0];
-var circleBottomLeft = document.getElementsByClassName("gs-circle-bottom-left")[0];
+var circleTopRights = document.getElementsByClassName("gs-circle-top-right");
+var circleBottomLefts = document.getElementsByClassName("gs-circle-bottom-left");
+var pageDataTitles = document.getElementsByClassName("gs-page-data-title-container");
+
 var pages = container.children[0].children;
 var noOfPages = container.children[0].children.length;
 var scrollValuePerPage = 300;
@@ -37,15 +39,38 @@ for (let index = 0; index < pageLinks.length; index++) {
     });
 }
 
+for (let index = 0; index < pageDataTitles.length; index++) {
+    const pageDataTitle = pageDataTitles[index];
+    let differentAccent = pageDataTitles[index].getAttribute("data-accent-for-two").split(",");
+    let titleData = pageDataTitles[index].innerHTML.trim();
+    pageDataTitles[index].innerHTML = "";
+    for (let index2 = 0; index2 < titleData.length; index2++) {
+        const titleLetter = titleData[index2];
+
+        const letterDiv = document.createElement("div");
+        letterDiv.innerHTML = titleLetter;
+        letterDiv.classList.add("gs-title-letter");
+        letterDiv.style.color = pageDataTitles[index].getAttribute("data-accent-one");
+        letterDiv.style.textShadow = "0.5vw 0 " + pageDataTitles[index].getAttribute("data-accent-one");
+
+        for (let index3 = 0; index3 < differentAccent.length; index3++) {
+            const element = differentAccent[index3];
+            if(parseInt(element) - 1 == index2){
+                letterDiv.style.color = pageDataTitles[index].getAttribute("data-accent-two");
+                letterDiv.style.textShadow = "0.5vw 0 " + pageDataTitles[index].getAttribute("data-accent-two");
+            }
+        }
+
+        pageDataTitles[index].appendChild(letterDiv);
+    }
+}
+
 updatePage();
 
 function updatePage(){
     for (let index = 0; index < pages.length; index++) {
         const page = pages[index];
         const pageLink = pageLinks[index];
-        let accentOne = pageDivs[index].getAttribute("data-accent-one");
-        let accentTwo = pageDivs[index].getAttribute("data-accent-two");
-        let accentThree = pageDivs[index].getAttribute("data-accent-three");
         if(index * scrollValuePerPage <= totalScroll){
             for (let index2 = 0; index2 < pages.length; index2++) {
                 const page2 = pages[index2];
@@ -55,10 +80,26 @@ function updatePage(){
             }
             page.classList.add("gs-active");
             pageLink.classList.add("gs-active");
-
             pageDivs[index].style.backgroundColor = pageDivs[index].getAttribute("data-accent-one");
-            circleBottomLeft.style.backgroundColor = pageDivs[index].getAttribute("data-accent-two");
-            circleTopRight.style.backgroundColor = pageDivs[index].getAttribute("data-accent-three");
+
+            for (let index = 0; index < circleBottomLefts.length; index++) {
+                const circleBottomLeft = circleBottomLefts[index];
+                circleBottomLeft.style.backgroundColor = pageDivs[index].getAttribute("data-accent-two");
+                // circleBottomLeft.classList.add("gs-opp-0");
+                // setTimeout(function(){
+                //     circleBottomLeft.classList.remove("gs-opp-0");
+                // }, 300);                
+            }
+
+            for (let index = 0; index < circleTopRights.length; index++) {
+                const circleTopRight = circleTopRights[index];
+                circleTopRight.style.backgroundColor = pageDivs[index].getAttribute("data-accent-three");
+                // circleTopRight.classList.add("gs-opp-0");
+                // setTimeout(function(){
+                //     circleTopRight.classList.remove("gs-opp-0");
+                // }, 300);
+            }
+            
         }
     }
 }
