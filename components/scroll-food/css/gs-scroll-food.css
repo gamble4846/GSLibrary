@@ -36,6 +36,11 @@
     align-items: center;
 }
 
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left{
+    display: flex;
+    align-items: center;
+}
+
 .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-title{
     color: #1E1812;
     font-weight: bolder;
@@ -357,6 +362,81 @@
     padding-top: 6vw;
 }
 
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu,
+.gs-scroll-food-outercontainer .gs-menu-side-container{
+    display: none;
+}
+
+.gs-scroll-food-outercontainer .gs-menu-side-container{
+    height: calc(100vh - var(--padding-outside-container-vertical));
+    left: -90vw;
+    bottom: 0;
+    width: 90vw;
+    position: fixed;
+    background-color: #1e1812eb;
+    z-index: 10;
+    transition: 0.3s ease-in-out;
+}
+
+.gs-scroll-food-outercontainer .gs-menu-side-container.gs-opened{
+    left: 0vw;
+}
+
+.gs-scroll-food-outercontainer .gs-menu-side-container .gs-food-menu-item{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vw;
+    font-weight: bolder;
+    color: white;
+    padding: 2vw;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn{
+    width: 50px;
+    height: 25px;
+    position: relative;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn .gs-menu-line{
+    background-color: #1E1812;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn .gs-menu-line.gs-one{
+    top: 0;
+    left: 0;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn .gs-menu-line.gs-two{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn .gs-menu-line.gs-three{
+    bottom: 0;
+    left: 0;
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn.gs-opened .gs-menu-line.gs-one{
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn.gs-opened .gs-menu-line.gs-two{
+    width: 0;   
+}
+
+.gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn.gs-opened .gs-menu-line.gs-three{
+    transform-origin: left;
+    transform: rotate(-45deg);
+}
 
 @media screen and (max-width: 1200px) {
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-image-container .gs-page-data-image{width: 50vw;}
@@ -439,6 +519,11 @@
 }
 
 @media screen and (max-width: 450px) {
+    .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu,
+    .gs-scroll-food-outercontainer .gs-menu-side-container{
+        display: block;
+    }
+
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-image-container .gs-page-data-image{
         width: auto;
         height: 35%;
@@ -486,7 +571,9 @@
 
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-follow,
     .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right .gs-scroll-down,
-    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line{
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line,
+    .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-right .menu-items-container,
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-title-container .gs-title-letter{
         display: none;
     }
 
@@ -538,13 +625,10 @@
         top: 10vh;
     }
 
-    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-title-container .gs-title-letter{
-        display: none;
-    }
-
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-title-container .gs-title-letter.gs-small-screen-title{
         display: block;
     }
+    
 }
 
 

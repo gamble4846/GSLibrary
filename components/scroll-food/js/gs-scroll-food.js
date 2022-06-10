@@ -6,6 +6,8 @@ var circleBottomLefts = document.getElementsByClassName("gs-circle-bottom-left")
 var pageDataTitles = document.getElementsByClassName("gs-page-data-title-container");
 var goLeftButtons = document.querySelectorAll(".gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left .gs-circle-arrow-container .gs-circle-arrow");
 var goRightButtons = document.querySelectorAll(".gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right .gs-circle-arrow-container .gs-circle-arrow");
+var menuToggleButtons = document.getElementsByClassName("gs-menu-toggle-btn");
+var sideMenus = document.getElementsByClassName("gs-menu-side-container");
 
 var pages = container.children[0].children;
 var noOfPages = container.children[0].children.length;
@@ -112,6 +114,21 @@ for (let index = 0; index < pageDataTitles.length; index++) {
 
         pageDataTitles[index].appendChild(letterDiv);
     }
+}
+
+for (let index = 0; index < menuToggleButtons.length; index++) {
+    const menuToggleButton = menuToggleButtons[index];
+    menuToggleButton.addEventListener("click", function(){
+        menuToggleButton.classList.toggle("gs-opened");
+    });
+
+    try{
+        const sideMenu = sideMenus[index];
+        menuToggleButton.addEventListener("click", function(){
+            sideMenu.classList.toggle("gs-opened");
+        });
+    }
+    catch(ex){}
 }
 
 updatePage();
