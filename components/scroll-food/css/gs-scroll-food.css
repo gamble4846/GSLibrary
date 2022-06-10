@@ -321,10 +321,21 @@
     }
 }
 
+@media screen and (max-width: 650px){
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-image-container .gs-page-data-image{
+        width: auto;
+        height: 40%;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-image-container .gs-page-data-image{
         width: auto;
-        height: 50%;
+        height: 35%;
+        max-height: 300px;
         right: 0;
         left: 0;
         margin: auto;
