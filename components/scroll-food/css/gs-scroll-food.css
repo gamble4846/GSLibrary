@@ -80,6 +80,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1vw;
+    background-color: white;
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left,
