@@ -66,7 +66,7 @@ for (let index = 0; index < goLeftButtons.length; index++) {
 for (let index = 0; index < pageDataTitles.length; index++) {
     const pageDataTitle = pageDataTitles[index];
     let differentAccent = pageDataTitles[index].getAttribute("data-accent-for-two").split(",");
-    let titleData = pageDataTitles[index].innerHTML.trim();
+    let titleData = pageDataTitles[index].getAttribute('data-title-content');
     pageDataTitles[index].innerHTML = "";
     for (let index2 = 0; index2 < titleData.length; index2++) {
         const titleLetter = titleData[index2];
@@ -84,6 +84,31 @@ for (let index = 0; index < pageDataTitles.length; index++) {
                 letterDiv.style.textShadow = "0.5vw 0 " + pageDataTitles[index].getAttribute("data-accent-two");
             }
         }
+
+        pageDataTitles[index].appendChild(letterDiv);
+    }
+
+    if(titleData.length % 2 != 0){
+        const letterDiv = document.createElement("div");
+        letterDiv.style.display = "none";
+        pageDataTitles[index].appendChild(letterDiv);
+    }
+
+}
+
+for (let index = 0; index < pageDataTitles.length; index++) {
+    const pageDataTitle = pageDataTitles[index];
+    let differentAccent = pageDataTitles[index].getAttribute("data-accent-for-two").split(",");
+    let titleData = pageDataTitles[index].getAttribute('data-title-content');
+    for (let index2 = 0; index2 < titleData.length; index2++) {
+        const titleLetter = titleData[index2];
+
+        const letterDiv = document.createElement("div");
+        letterDiv.innerHTML = titleLetter;
+        letterDiv.classList.add("gs-title-letter");
+        letterDiv.classList.add("gs-small-screen-title");
+        letterDiv.style.color = pageDataTitles[index].getAttribute("data-accent-one");
+        letterDiv.style.textShadow = "0.5vw 0 " + pageDataTitles[index].getAttribute("data-accent-one");
 
         pageDataTitles[index].appendChild(letterDiv);
     }
