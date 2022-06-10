@@ -13,7 +13,7 @@ var totalScroll = 0;
 
 container.addEventListener("wheel", event => {
     if(totalScroll >= 0){
-        if(totalScroll <= noOfPages * scrollValuePerPage){
+        if(totalScroll < noOfPages * scrollValuePerPage){
             totalScroll += event.deltaY;
             updatePage();
         }
@@ -136,10 +136,17 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            totalScroll += 100;
+            if(totalScroll < noOfPages * scrollValuePerPage)
+                totalScroll += scrollValuePerPage;
+            if(totalScroll == noOfPages * scrollValuePerPage)
+                totalScroll = (noOfPages * scrollValuePerPage) - (scrollValuePerPage)
         } else {
-            totalScroll -=100;
-        }       
+            if(totalScroll >= 0)
+                totalScroll -= scrollValuePerPage;
+            if(totalScroll < 0)
+            totalScroll = 0;
+        }
+        console.log(totalScroll);
         updatePage();                
     } else {
         if ( yDiff > 0 ) {
