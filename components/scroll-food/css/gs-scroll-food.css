@@ -393,3 +393,38 @@
         z-index: 5;
     }
 }
+
+
+@media screen and (max-width: 320px) {
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-image-container .gs-page-data-image{
+        width: auto;
+        height: 30%;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right{
+        width: 10vw;
+        height: 10vw;
+        right: 2vw;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        z-index: 5;
+    }
+    
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left{
+        width: 10vw;
+        height: 10vw;
+        left: 2vw;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        z-index: 5;
+    }
+}
