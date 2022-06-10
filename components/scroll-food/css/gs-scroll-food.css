@@ -263,13 +263,6 @@
 }
 
 .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-text-container{
-    /* width: 35%;
-    font-size: 20px;
-    position: absolute;
-    top: 340px;
-    left: 70px;
-    line-height: 40px; */
-
     width: 35%;
     font-size: 1vw;
     position: fixed;
@@ -365,11 +358,10 @@
         transform: scale(3);
     }
 
-    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-follow{
-        display: none;
-    }
-
-    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right{
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-follow,
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-right,
+    .gs-scroll-food-outercontainer .gs-scroll-food-footer .gs-left .gs-social .gs-social-in.gs-social-line,
+    .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-text-container{
         display: none;
     }
 
@@ -378,12 +370,26 @@
     }
 
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-top-right{
-        width: 20vw;
-        height: 20vw;
+        width: 15vw;
+        height: 15vw;
+        right: 2vw;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        z-index: 5;
     }
     
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-circle-bottom-left{
-        width: 20vw;
-        height: 20vw;
+        width: 15vw;
+        height: 15vw;
+        left: 2vw;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        z-index: 5;
     }
 }
