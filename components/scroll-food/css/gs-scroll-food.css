@@ -24,7 +24,8 @@
     left: 0;
     width: 100%;
     height: var(--padding-outside-container-vertical);
-    z-index: 2;
+    z-index: 20;
+    background-color: white;
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container{
@@ -367,16 +368,35 @@
     display: none;
 }
 
+
 .gs-scroll-food-outercontainer .gs-menu-side-container{
-    height: calc(100vh - var(--padding-outside-container-vertical));
+    height: 100vh;
     left: -90vw;
     bottom: 0;
     width: 90vw;
     position: fixed;
     background-color: #1e1812eb;
-    z-index: 10;
+    z-index: 11;
     transition: 0.3s ease-in-out;
 }
+
+.gs-scroll-food-outercontainer .gs-menu-in-container-one{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gs-scroll-food-outercontainer .gs-menu-in-container-two{
+    position: absolute;
+    height: max-content;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 .gs-scroll-food-outercontainer .gs-menu-side-container.gs-opened{
     left: 0vw;
@@ -388,13 +408,14 @@
     font-size: 5vw;
     font-weight: bolder;
     color: white;
-    padding: 2vw;
+    padding: 4vw;
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn{
     width: 50px;
     height: 25px;
     position: relative;
+    z-index: 20;
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container .gs-left .gs-food-side-menu .gs-menu-toggle-btn .gs-menu-line{
