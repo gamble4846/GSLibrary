@@ -332,7 +332,10 @@
     bottom: 10vw;
     left: 8vw;
     line-height: 1.8vw;
+    transform: translateY(10px);
     color: black;
+    transition: transform 0.3s 0.3s ease-out, opacity 0.3s;
+    opacity: 0;
 }
 
 .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-title-container{
@@ -361,6 +364,11 @@
 }
 
 .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page.gs-active .gs-page-contents .gs-page-data .gs-page-data-title-container .gs-title-letter{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page.gs-active .gs-page-contents .gs-page-data .gs-page-data-text-container{
     transform: translateY(0);
     opacity: 1;
 }
