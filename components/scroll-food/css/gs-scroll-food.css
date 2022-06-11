@@ -24,8 +24,7 @@
     left: 0;
     width: 100%;
     height: var(--padding-outside-container-vertical);
-    z-index: 20;
-    background-color: white;
+    z-index: 2;
 }
 
 .gs-scroll-food-outercontainer .gs-scroll-food-menu .gs-menu-container{
@@ -649,7 +648,11 @@
     .gs-scroll-food-outside-container .gs-scroll-food-container .gs-pages-container .gs-page .gs-page-contents .gs-page-data .gs-page-data-title-container .gs-title-letter.gs-small-screen-title{
         display: block;
     }
-    
+
+    .gs-scroll-food-outercontainer .gs-scroll-food-menu{
+        z-index: 12;
+        background-color: white;
+    }
 }
 
 
