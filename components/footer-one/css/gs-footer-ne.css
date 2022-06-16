@@ -1,0 +1,96 @@
+:root{
+    --footerBackgroundColor-gs-footer-one: #1C1C1E;
+    --footerPadding-gs-footer-one: 30px;
+    --footerHeader-Text-Color: white;
+    --footerBody-Text-Color: #737373;
+    --footerSocialBackgroundColor-gs-footer-one: #818a91;
+}
+
+.gs-footerMainConatiner{
+    background-color: var(--footerBackgroundColor-gs-footer-one);
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer{
+    padding: var(--footerPadding-gs-footer-one);
+    height: 100%;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-about-us{
+    width: 50%;
+    height: 100%;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotLinks{
+    width: 25%;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footHeader{
+    font-size: 25px;
+    color: var(--footerHeader-Text-Color);
+    padding-bottom: 10px;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody{
+    color: var(--footerBody-Text-Color);
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li{
+    padding: 0px 0px 8px 0px;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li :hover{
+    color: white;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerHr{
+    margin: 20px 0px;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left{
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+    color: var(--footerBody-Text-Color);
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right{
+    width: 50%;
+    justify-content: right;
+    display: flex;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon{
+    border-radius: 50%;
+    background-color: #818a91;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon svg{
+    height: 30px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    fill: black;
+}
+
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right :hover{
+    background-color: white;
+}
