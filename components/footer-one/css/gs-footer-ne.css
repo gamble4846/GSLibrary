@@ -116,6 +116,7 @@
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon:hover{
     background-color: white;
+    border-radius: 20%;
 }
 
 @media screen and (max-width: 2560px) {
