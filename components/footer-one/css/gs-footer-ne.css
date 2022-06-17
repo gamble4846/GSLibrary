@@ -1,8 +1,8 @@
 :root{
     --footerBackgroundColor-gs-footer-one: #1C1C1E;
     --footerPadding-gs-footer-one: 30px;
-    --footerHeader-Text-Color: white;
-    --footerBody-Text-Color: #737373;
+    --footerHeader-Text-Color-gs-footer-one: white;
+    --footerBody-Text-Color-gs-footer-one: #737373;
     --footerSocialBackgroundColor-gs-footer-one: #818a91;
     --transition-time-gs-footer-one: 0.3s;
 }
@@ -35,12 +35,12 @@
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footHeader{
     font-size: 25px;
-    color: var(--footerHeader-Text-Color);
+    color: var(--footerHeader-Text-Color-gs-footer-one);
     padding-bottom: 10px;
 }
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody{
-    color: var(--footerBody-Text-Color);
+    color: var(--footerBody-Text-Color-gs-footer-one);
 }
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list{
@@ -73,7 +73,7 @@
     width: 50%;
     text-align: left;
     font-size: 18px;
-    color: var(--footerBody-Text-Color);
+    color: var(--footerBody-Text-Color-gs-footer-one);
 }
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left a{
