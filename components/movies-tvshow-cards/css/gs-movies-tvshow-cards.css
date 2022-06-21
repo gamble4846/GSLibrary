@@ -112,10 +112,20 @@
 
 @media screen and (max-width: 425px) {
     :root{
-        --main-container-padding-MTCV1: 10px 20px;
+        --main-container-padding-MTCV1: 10px 10px;
         --card-image-height-MTCV1: 200px;
         --card-width-MTCV1: 130px;
         --card-title-font-size-MTCV1: 16px;
         --card-header-font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    :root{
+        --main-container-padding-MTCV1: 10px 10px;
+        --card-image-height-MTCV1: 130px;
+        --card-width-MTCV1: 80px;
+        --card-title-font-size-MTCV1: 13px;
+        --card-header-font-size: 10px;
     }
 }
