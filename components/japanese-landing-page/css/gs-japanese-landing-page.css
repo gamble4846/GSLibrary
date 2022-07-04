@@ -6,6 +6,7 @@
     --navigation-menu-font-size-JLP: 17px;
     --page-inner-container-padding-JLP: 50px;
     --navigation-padding-JLP: 0px 50px;
+    --sword-width-JLP: 300px;
 }
 
 @font-face {
@@ -20,6 +21,7 @@
 
 .main-container-JLP .navigation-container-JLP{
     height: var(--navigation-height-JLP);
+    z-index: 2;
 }
 
 .main-container-JLP .navigation-container-JLP .navigation-inner-conatiner-JLP{
@@ -109,8 +111,105 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.fixed-item-body-container.page-1 .outer-red-circle-container{
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+}
+
+.fixed-item-body-container.page-1 .outer-sword-container{
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+}
+
+.fixed-item-body-container.page-1 .outer-sword-container .outer-sword{
+    width: var(--sword-width-JLP);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.fixed-item-body-container .outer-red-circle-container .outer-red-circle{
+    animation: rotating 4s infinite;
+}
+
+.fixed-item-body-container.page-1 .outer-red-circle-container .outer-red-circle{
+    width: 25vw;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: var(--scroll-transition-JLP);
+}
+
+.fixed-item-body-container.page-1 .outer-red-circle-container .japan-text-in-red{
+    width: 18vw;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: var(--scroll-transition-JLP);
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    0% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50%{
+        -ms-transform: rotate(-45deg);
+        -moz-transform: rotate(-5deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotating {
+    0% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50%{
+        -ms-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 }
