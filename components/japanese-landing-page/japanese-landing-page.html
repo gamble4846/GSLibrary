@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文化</title>
+    <link rel="stylesheet" href="../../css/gs-main.css">
+    <link rel="stylesheet" href="css/gs-japanese-landing-page.css">
+    <link rel="icon" type="image/x-icon" href="images/red-circle.ico">
+</head>
+<body>
+    <div class="main-container-JLP">
+        <div class="navigation-container-JLP">
+            <div class="navigation-inner-conatiner-JLP">
+                <div class="navigation-left">
+                    <div class="navigation-header">Culture.</div>
+                </div>
+                <div class="navigation-right">
+                    <div class="navigation-horizontal-menu">
+                        <div class="menu-item" onclick="updatePageFromMenuClick(1)">Sushi</div>
+                        <div class="menu-item" onclick="updatePageFromMenuClick(2)">Samurai</div>
+                        <div class="menu-item" onclick="updatePageFromMenuClick(3)">Hina Doll</div>
+                        <div class="menu-item" onclick="updatePageFromMenuClick(4)">Waves</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-item-body-container page-1" id="fixed-item-body-container">
+            <div class="outer-red-circle-container">
+                <img src="images/red-circle.png" class="outer-red-circle">
+            </div>
+        </div>
+        <div class="body-container-JLP" id="body-container-JLP">
+            <div class="body-inner-conainer-JLP page-1" id="body-inner-conainer-JLP">
+                <div class="page-container-JLP" data-target-class="page-1">
+                    <div class="page-inner-container">
+                        <div class="page-1-main-image-container">
+                            <img src="images/page-1-main-text.png" class="page-1-main-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-container-JLP" data-target-class="page-2">
+                    page 2
+                </div>
+                <div class="page-container-JLP" data-target-class="page-3">
+                    page 3
+                </div>
+                <div class="page-container-JLP" data-target-class="page-4">
+                    page 4
+                </div>
+                <div class="page-container-JLP" data-target-class="page-5">
+                    page 5
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/gs-japanese-landing-page.js"></script>
+</body>
+</html>
