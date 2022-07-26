@@ -150,3 +150,23 @@ body{
     cursor: pointer;
     object-fit: cover;
 }
+
+.gs-dropbox-left-list{
+    list-style-type: none;
+    margin: 0px;
+    padding-top: 8px;
+}
+
+.gs-dropbox-left-list li{
+    padding: 8px 0px;
+    font-size: 16px;
+    color: rgba(82,74,62,.82);
+}
+
+.gs-dropbox-left-list li span{
+    cursor: pointer;
+}
+
+.gs-dropbox-left-list li span:hover{
+    color: #1e1919;
+}
