@@ -7,3 +7,8 @@ function updateSearchTextBox(flag){
         container.classList.remove("active");
     }
 }
+
+function toggleRightMenu() {
+    var rightPanel = document.getElementById("gs-dropbox-right");
+    rightPanel.classList.toggle("open");
+}
