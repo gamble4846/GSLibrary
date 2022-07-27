@@ -23,3 +23,11 @@ function openThisRightPanel(section){
 
     section.classList.add("open");
 }
+
+function openRightMenuWithSection(element){
+    var container = element.parentElement.parentElement.parentElement;
+    container.classList.add("open");
+
+    var rightPanel = document.getElementById("gs-dropbox-right");
+    rightPanel.classList.toggle("open");
+}

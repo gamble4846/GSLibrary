@@ -9,6 +9,7 @@
     --gs-dropbox-navbar-right-icon-size: 20px;
     --gs-dropbox-navbar-right-user-icon-size: 30px;
     --gs-right-panel-section-container-height: 56px;
+    --gs-right-panel-section-content-header-height: 56px;
 }
 
 body{
@@ -298,4 +299,42 @@ body{
 
 .gs-dropbox-left-list li span:hover{
     color: #1e1919;
+}
+
+.rightPanelContentHeader{
+    display: flex;
+    height: var(--gs-right-panel-section-content-header-height);
+    align-items: center;
+}
+
+.rightPanelContentHeaderIconContainer{
+    display: flex;
+    align-items: center;
+}
+
+.rightPanelContentHeaderTitle{
+    padding: 0px 5px;
+    font-size: 14px;
+}
+
+.rightPanelContentBody{
+    height: calc(100% - (var(--gs-right-panel-section-content-header-height) + 10px));
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0161ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003488;
 }
