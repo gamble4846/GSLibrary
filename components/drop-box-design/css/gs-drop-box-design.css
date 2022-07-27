@@ -594,13 +594,28 @@ body{
 
 @media screen and (max-width: 800px) {
     .gs-dropbox-left {
-        display: none;
+        position: fixed;
+        left: calc(var(--gs-dropbox-left-width) - (var(--gs-dropbox-left-width) * 2));
+        top: var(--gs-dropbox-nav-bar-height);
+        z-index: 1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .gs-dropbox-left.open{
+        left: 0;
     }
 
     :root{
-        --gs-dropbox-left-width: 0px;
         --gs-dropbox-navbar-right-search-container-width: 65%;
         --gs-dropbox-navbar-right-icons-width: 25%;
+    }
+
+    .gs-dropbox-navbar-right{
+        width: 100%;
+    }
+
+    .gs-bropbox-center{
+        width: 100%;
     }
 
     .gs-dropbox-navbar-left{
@@ -626,7 +641,7 @@ body{
     }
 
     :root{
-        --gs-dropbox-center-common-padding: 15px
+        --gs-dropbox-center-common-padding: 15px;
     }
 }
 

@@ -31,3 +31,8 @@ function openRightMenuWithSection(element){
     var rightPanel = document.getElementById("gs-dropbox-right");
     rightPanel.classList.add("open");
 }
+
+function toggleLeftMenu(){
+    var leftmenu = document.getElementById("gs-dropbox-left");
+    leftmenu.classList.toggle("open");
+}
