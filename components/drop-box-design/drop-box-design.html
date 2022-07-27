@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop Box</title>
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
-    <link rel="stylesheet" href="../../css/gs-main.css">
     <link rel="stylesheet" href="css/gs-drop-box-design.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
@@ -21,7 +20,7 @@
                 <div class="gs-dropbox-navbar-right-search-container" id="gs-dropbox-navbar-right-search-container">
                     <span class="gs-dropbox-search-icon-container"><img src="svgs/search.svg" class="gs-dropbox-search-icon"></span>
                     <input type="text" class="gs-dropbox-navbar-right-search-input" placeholder="Search" onfocus="updateSearchTextBox(true)">
-                    <span class="gs-dropbox-cancel-icon-container"><span class="gs-dropbox-cancel-icon" onclick="updateSearchTextBox(false)"><img src="svgs/cancel.svg"></span></span>
+                    <span class="gs-dropbox-cancel-icon-container"><img src="svgs/cancel.svg" class="gs-dropbox-cancel-icon" onclick="updateSearchTextBox(false)"></span>
                 </div>
                 <div class="gs-dropbox-navbar-right-icons-container">
                     <img src="svgs/questionMark.png" class="gs-dropbox-navbar-right-icon">
@@ -49,16 +48,35 @@
             <div class="gs-dropbox-right" id="gs-dropbox-right">
                 <div class="gs-dropbox-right-container">
                     <div class="folderTitleContainer">
+                        <div class="folderTitle">Dropbox</div>
                         <div class="panelOpenCloseIconContainer"><img src="svgs/closepanel.svg" class="panelOpenCloseIcon" onclick="toggleRightMenu()"></div>
                     </div>
-                    <div class="infomationContainer">
-                        <div class="infoIconContainer"><img src="svgs/infoIcon.svg" class="panelInfoIcon"></div>
+                    <div class="rightPanelSectionContainer open" onclick="openThisRightPanel(this)">
+                        <div class="rightPanelSectionIconAndTitleContainer">
+                            <div class="rightPanelIconContainer"><img src="svgs/infoIcon.svg" class="rightPanelSectionIcon"></div>
+                            <div class="rightPanelSectionTitle">Info</div>
+                        </div>
+                        <div class="rightPanelSectionContent">
+                            Info
+                        </div>
                     </div>
-                    <div class="pinnedContainer">
-                        <div class="pinnedIconContainer"><img src="svgs/pinIcon.svg" class="panelPinIcon"></div>
+                    <div class="rightPanelSectionContainer" onclick="openThisRightPanel(this)">
+                        <div class="rightPanelSectionIconAndTitleContainer">
+                            <div class="rightPanelIconContainer"><img src="svgs/pinIcon.svg" class="rightPanelSectionIcon"></div>
+                            <div class="rightPanelSectionTitle">Pinned Items</div>
+                        </div>
+                        <div class="rightPanelSectionContent">
+                            Pinned Items
+                        </div>
                     </div>
-                    <div class="folderContainer">
-                        <div class="folderIconContainer"><img src="svgs/folderIcon.svg" class="panelFolderIcon"></div>
+                    <div class="rightPanelSectionContainer" onclick="openThisRightPanel(this)">
+                        <div class="rightPanelSectionIconAndTitleContainer">
+                            <div class="rightPanelIconContainer"><img src="svgs/folderIcon.svg" class="rightPanelSectionIcon"></div>
+                            <div class="rightPanelSectionTitle">Activity</div>
+                        </div>
+                        <div class="rightPanelSectionContent">
+                            Activity
+                        </div>
                     </div>
                 </div>
             </div>

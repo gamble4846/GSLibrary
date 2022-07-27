@@ -12,3 +12,14 @@ function toggleRightMenu() {
     var rightPanel = document.getElementById("gs-dropbox-right");
     rightPanel.classList.toggle("open");
 }
+
+function openThisRightPanel(section){
+    const allSections = document.getElementsByClassName("rightPanelSectionContainer");
+
+    for (let index = 0; index < allSections.length; index++) {
+        const section = allSections[index];
+        section.classList.remove("open");
+    }
+
+    section.classList.add("open");
+}

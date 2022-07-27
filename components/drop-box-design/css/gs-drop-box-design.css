@@ -8,6 +8,7 @@
     --gs-dropbox-navbar-right-icons-width: 15%;
     --gs-dropbox-navbar-right-icon-size: 20px;
     --gs-dropbox-navbar-right-user-icon-size: 30px;
+    --gs-right-panel-section-container-height: 56px;
 }
 
 body{
@@ -55,6 +56,33 @@ body{
     transition: 0.3s ease-in-out;
 }
 
+.rightPanelSectionContainer.open{
+    height: max-content;
+    cursor: default;
+}
+
+.rightPanelSectionIconAndTitleContainer{
+    height: var(--gs-right-panel-section-container-height);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+.gs-dropbox-right.open .rightPanelSectionContainer.open .rightPanelSectionIconAndTitleContainer{
+    display: none;
+}
+
+.rightPanelSectionContent{
+    height: calc(100vh - ((var(--gs-right-panel-section-container-height) * 3) + var(--gs-dropbox-nav-bar-height) + 4px));
+    width: 100%;
+    display: none;
+}
+
+.gs-dropbox-right.open .rightPanelSectionContainer.open .rightPanelSectionContent{
+    display: block;
+}
+
 .gs-dropbox-right.open{
     --gs-dropbox-right-width: 328px;
 }
@@ -75,60 +103,67 @@ body{
     justify-content: center;
     align-items: center;
     border-bottom: var(--gs-common-border) solid #c9c5be;
-    height: 56px;
+    height: var(--gs-right-panel-section-container-height);
+    overflow: hidden;
 }
 
-.infomationContainer{
+.folderTitle{
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    padding: 0px 10px;
+}
+
+.rightPanelSectionTitle{
+    font-size: 14px;
+    width: 70%;
+    padding: 0px 10px;
+    display: none;
+    white-space: nowrap;
+}
+
+.gs-dropbox-right.open .rightPanelSectionContainer{
+    border-bottom: var(--gs-common-border) solid #c9c5be;
+}
+
+.gs-dropbox-right.open .panelOpenCloseIconContainer{
+    padding: 0px 10px;
+}
+
+.gs-dropbox-right.open .rightPanelSectionTitle{
+    display: block;
+}
+
+.gs-dropbox-right.open .folderTitleContainer{
+    justify-content: space-between;
+}
+
+.gs-dropbox-right.open .folderTitle{
+    display: block;
+}
+
+.gs-dropbox-right.open .rightPanelSectionContainer{
+    justify-content: start;
+    padding: 0px 10px;
+}
+
+.rightPanelSectionContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 56px;
-}
-
-.infoIconContainer{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-}
-
-.panelInfoIcon{
+    height: var(--gs-right-panel-section-container-height);
+    overflow: hidden;
     cursor: pointer;
 }
 
-.pinnedContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 56px;
-}
-
-.pinnedIconContainer{
+.rightPanelIconContainer{
     display: flex;
     align-items: center;
     height: 100%;
     justify-content: center;
 }
 
-.panelPinIcon{
-    cursor: pointer;
-}
-
-.folderContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 56px;
-}
-
-.folderIconContainer{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-}
-
-.panelFolderIcon{
+.rightPanelSectionIcon{
     cursor: pointer;
 }
 
