@@ -12,6 +12,7 @@
     --gs-right-panel-section-content-header-height: 56px;
     --gs-bropbox-center-bread-crumb-and-layout-button-container-height: 56px;
     --gs-dropbox-center-header-buttons-container-height: 56px;
+    --gs-dropbox-center-common-padding: 30px;
 }
 
 body{
@@ -346,11 +347,12 @@ body{
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 0px 30px;
+    padding: 0px var(--gs-dropbox-center-common-padding);
 }
 
 .gs-bropbox-center-bread-crumb-container{
-    width: 90%;
+    width: calc(90% - 10px);
+    padding-right: 10px;
 }
 
 .gs-bropbox-center-layout-button-container{
@@ -373,6 +375,15 @@ body{
     display: block;
     overflow-x: auto;
     display: flex;
+}
+
+.gs-bread-crumb-alternate{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    width: calc(90% - 10px);
+    padding-right: 10px;
 }
 
 .gs-bropbox-center-bread-crumb li{
@@ -411,9 +422,11 @@ body{
 .gs-dropbox-center-header-buttons-container{
     display: flex;
     height: var(--gs-dropbox-center-header-buttons-container-height);
-    padding: 0px 30px;
+    padding: 0px var(--gs-dropbox-center-common-padding);
     align-items: center;
     justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .uploadButtonContentUploadIcon{
@@ -495,3 +508,131 @@ body{
 .padding-5x-imp{
     padding: 0px 5px !important;
 }
+
+.gs-dropbox-center-folder-files-container{
+    height: calc(100vh - ((56px * 2) + var(--gs-dropbox-nav-bar-height) + (var(--gs-dropbox-center-common-padding) * 2)));
+    overflow: auto;
+    padding: var(--gs-dropbox-center-common-padding);
+}
+
+.gs-folder-files-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gs-folder-files-table tr{
+    border-bottom: 1px solid #ede9e3;
+    height: 40px;
+}
+
+.gs-folder-files-table th div{
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.gs-folder-files-table tbody tr:hover{
+    background-color: #f7f5f2;
+}
+
+
+.fileFolderContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fileFolderIconContainer{
+    display: flex;
+    align-items: center;
+}
+
+.fileFolderRight{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.fileFolderName{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.fileFolderLeft{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.eclipsis-div{
+    min-width: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gs-hamburger-container{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .gs-dropbox-right {
+        display: none;
+    }
+
+    :root{
+        --gs-dropbox-right-width: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gs-dropbox-left {
+        display: none;
+    }
+
+    :root{
+        --gs-dropbox-left-width: 0px;
+        --gs-dropbox-navbar-right-search-container-width: 65%;
+        --gs-dropbox-navbar-right-icons-width: 25%;
+    }
+
+    .gs-dropbox-navbar-left{
+        display: none;
+    }
+
+    .gs-dropbox-navbar-right{
+        justify-content: space-between;
+    }
+
+    .gs-dropbox-navbar-right-search-container.active{
+        --gs-dropbox-navbar-right-search-container-width: 65%;
+    }
+
+    .gs-hamburger-container{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hideBefore600{
+        display: none;
+    }
+
+    :root{
+        --gs-dropbox-center-common-padding: 15px
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .hideAfter600{
+        display: none;
+    }
+}
+

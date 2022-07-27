@@ -17,6 +17,9 @@
                 <img src="images/fullLogo.png" class="gs-dropbox-logo-in-navbar-left">
             </div>
             <div class="gs-dropbox-navbar-right">
+                <div class="gs-hamburger-container">
+                    <img src="svgs/hamburger.svg" class="gs-hamburger-icon">
+                </div>
                 <div class="gs-dropbox-navbar-right-search-container" id="gs-dropbox-navbar-right-search-container">
                     <span class="gs-dropbox-search-icon-container"><img src="svgs/search.svg" class="gs-dropbox-search-icon"></span>
                     <input type="text" class="gs-dropbox-navbar-right-search-input" placeholder="Search" onfocus="updateSearchTextBox(true)">
@@ -44,13 +47,16 @@
             </div>
             <div class="gs-bropbox-center">
                 <div class="gs-bropbox-center-bread-crumb-and-layout-button-container">
-                    <div class="gs-bropbox-center-bread-crumb-container">
+                    <div class="gs-bropbox-center-bread-crumb-container hideBefore600">
                         <ul class="gs-bropbox-center-bread-crumb">
                             <li><span>Folder 1</span></li>
                             <li><span>Folder 2</span></li>
                             <li><span>Folder 3</span></li>
                             <li><span>Folder 4</span></li>
                         </ul>
+                    </div>
+                    <div class="gs-bread-crumb-alternate hideAfter600">
+                        Folder 4
                     </div>
                     <div class="gs-bropbox-center-layout-button-container">
                         <img src="svgs/bars.svg" class="gs-bropbox-center-layout-button-bars">
@@ -61,14 +67,14 @@
                     <div class="gs-dropbox-center-header-buttons-container-left">
                         <div class="gs-squareButtonBlue">
                             <div class="uploadButtonContent">
-                                <img src="svgs/closepanel.svg" class="uploadButtonContentUploadIcon"> 
+                                <img src="svgs/closepanel.svg" class="uploadButtonContentUploadIcon hideBefore600"> 
                                 <span class="uploadButtonContentText">Upload</span> 
                                 <img src="svgs/downArrow.svg" class="uploadButtonContentDownArrow">
                             </div>
                         </div>
                         <div class="gs-squareButtonGrey">
                             <div class="createButtonContent">
-                                <img src="svgs/plus.svg" class="createButtonContentUploadIcon"> 
+                                <img src="svgs/plus.svg" class="createButtonContentUploadIcon hideBefore600"> 
                                 <span class="createButtonContentText">Create</span> 
                                 <img src="svgs/downArrow.svg" class="createButtonContentDownArrow">
                             </div>
@@ -80,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gs-dropbox-center-header-buttons-container-right">
+                    <div class="gs-dropbox-center-header-buttons-container-right hideBefore600">
                         <div class="gs-squareButtonGrey">
                             <div class="createButtonContent">
                                 <img src="svgs/share.svg" class="createButtonContentUploadIcon"> 
@@ -89,6 +95,91 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="gs-dropbox-center-folder-files-container">
+                    <table class="gs-folder-files-table">
+                        <thead>
+                            <tr>
+                                <th width="70%"><div class="eclipsis-div">Name</div></th>
+                                <th width="15%" class="hideBefore600"><div class="eclipsis-div">Modified</div></th>
+                                <th width="15%" class="hideBefore600"><div class="eclipsis-div">Who can access</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="fileFolderContainer">
+                                        <div class="fileFolderLeft">
+                                            <div class="fileFolderIconContainer">
+                                                <img src="svgs/folder.svg" class="fileFolderIcon">
+                                            </div>
+                                            <div class="fileFolderName eclipsis-div">
+                                                Folder 1
+                                            </div>
+                                        </div>
+                                        <div class="fileFolderRight">
+                                            <img src="svgs/star.svg" class="fileFolderStarIcon hideBefore600">
+                                            <img src="svgs/tripleDot.svg" class="fileFolderTripleDotIcon hideAfter600">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">--</div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">Only you</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="fileFolderContainer">
+                                        <div class="fileFolderLeft">
+                                            <div class="fileFolderIconContainer">
+                                                <img src="svgs/folder.svg" class="fileFolderIcon">
+                                            </div>
+                                            <div class="fileFolderName eclipsis-div">
+                                                Folder 2
+                                            </div>
+                                        </div>
+                                        <div class="fileFolderRight">
+                                            <img src="svgs/star.svg" class="fileFolderStarIcon hideBefore600">
+                                            <img src="svgs/tripleDot.svg" class="fileFolderTripleDotIcon hideAfter600">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">--</div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">Only you</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="fileFolderContainer">
+                                        <div class="fileFolderLeft">
+                                            <div class="fileFolderIconContainer">
+                                                <img src="svgs/html.svg" class="fileFolderIcon">
+                                            </div>
+                                            <div class="fileFolderName eclipsis-div">
+                                                File 1.html
+                                            </div>
+                                        </div>
+                                        <div class="fileFolderRight">
+                                            <img src="svgs/star.svg" class="fileFolderStarIcon hideBefore600">
+                                            <img src="svgs/tripleDot.svg" class="fileFolderTripleDotIcon hideAfter600">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">15/10/2021 15:25</div>
+                                </td>
+                                <td class="hideBefore600">
+                                    <div class="eclipsis-div">Only you</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="gs-dropbox-right" id="gs-dropbox-right">
