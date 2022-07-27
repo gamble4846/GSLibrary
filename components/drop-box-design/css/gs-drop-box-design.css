@@ -10,6 +10,8 @@
     --gs-dropbox-navbar-right-user-icon-size: 30px;
     --gs-right-panel-section-container-height: 56px;
     --gs-right-panel-section-content-header-height: 56px;
+    --gs-bropbox-center-bread-crumb-and-layout-button-container-height: 56px;
+    --gs-dropbox-center-header-buttons-container-height: 56px;
 }
 
 body{
@@ -337,4 +339,159 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #003488;
+}
+
+.gs-bropbox-center-bread-crumb-and-layout-button-container{
+    height: var(--gs-bropbox-center-bread-crumb-and-layout-button-container-height);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.gs-bropbox-center-bread-crumb-container{
+    width: 90%;
+}
+
+.gs-bropbox-center-layout-button-container{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.gs-bropbox-center-layout-button-downArrow{
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+
+.gs-bropbox-center-bread-crumb{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow-x: auto;
+    display: flex;
+}
+
+.gs-bropbox-center-bread-crumb li{
+    font-size: 16px;
+    color: #797369;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.gs-bropbox-center-bread-crumb li:hover span{
+    text-decoration: underline;
+}
+
+.gs-bropbox-center-bread-crumb li:last-child:after { 
+    content: ""; 
+}
+
+.gs-bropbox-center-bread-crumb li:last-child:hover span{
+    text-decoration: none;
+}
+
+.gs-bropbox-center-bread-crumb li::after{
+    content: "/";
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #797369;
+    cursor: default;
+    font-style: italic;
+}
+
+.gs-bropbox-center-bread-crumb li:last-child{
+    color: black;
+    cursor: default;
+}
+
+.gs-dropbox-center-header-buttons-container{
+    display: flex;
+    height: var(--gs-dropbox-center-header-buttons-container-height);
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploadButtonContentUploadIcon{
+    transform: rotate(-90deg);
+    filter: brightness(0) invert(1);
+}
+
+.uploadButtonContentDownArrow{
+    height: 18px;
+    width: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.createButtonContentDownArrow{
+    height: 18px;
+    width: 18px;
+}
+
+.uploadButtonContentText{
+    padding: 0px 5px;
+}
+
+.createButtonContentText{
+    padding: 0px 5px;
+}
+
+.uploadButtonContent{
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.createButtonContent{
+    display: flex;
+    align-items: center;
+    height: 32px; 
+}
+
+.gs-squareButtonBlue{
+    background-color: #0161ff;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-right: 16px;
+}
+
+.gs-squareButtonBlue:hover{
+    background-color: #0057e5;
+}
+
+.gs-squareButtonGrey{
+    color: #1e1919;
+    background-color: #f3f0eb;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-right: 16px;
+}
+
+.gs-squareButtonGrey:hover{
+    background-color: #e9e3da;
+}
+
+.gs-dropbox-center-header-buttons-container-left{
+    display: flex;
+    height: var(--gs-dropbox-center-header-buttons-container-height);
+    align-items: center;
+    justify-content: start;
+}
+
+.OnePXBarVerticle{
+    height: 32px;
+    width: 1px;
+    background-color: #c9c5be;
+    margin-right: 16px;
+}
+
+.padding-5x-imp{
+    padding: 0px 5px !important;
 }

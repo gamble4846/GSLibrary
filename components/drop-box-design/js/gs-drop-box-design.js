@@ -29,5 +29,5 @@ function openRightMenuWithSection(element){
     container.classList.add("open");
 
     var rightPanel = document.getElementById("gs-dropbox-right");
-    rightPanel.classList.toggle("open");
+    rightPanel.classList.add("open");
 }
