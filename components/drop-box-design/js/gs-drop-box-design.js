@@ -51,6 +51,7 @@ function closeFile(){
 }
 
 function showRightClickMenu(event){
+    event.preventDefault();
     var rightClickMenu = document.getElementById("gs-drop-box-right-click-menu");
 
     
@@ -65,7 +66,6 @@ function showRightClickMenu(event){
     if((_docWidth - event.clientX) < (rightClickMenuWidth + 20)){
         rightClickMenu.style.right = _docWidth - event.clientX + "px";
         rightClickMenu.style.left = "auto";
-        console.log(rightClickMenu.style.right);
     }
     else{
         rightClickMenu.style.right = "auto";
@@ -84,7 +84,6 @@ function fullDocumentClick(event){
 
 document.addEventListener("DOMContentLoaded", function(event) {
     var rightClickElements = document.getElementsByClassName("allowRightClick");
-    console.log(rightClickElements);
     for (let index = 0; index < rightClickElements.length; index++) {
         const rightClickElement = rightClickElements[index];
         rightClickElement.addEventListener("contextmenu", showRightClickMenu);
