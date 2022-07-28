@@ -51,6 +51,13 @@ function closeFile(){
 }
 
 function showRightClickMenu(event){
+    var trsHovered = document.getElementsByClassName("gs-folder-files-table-tr-hover");
+    for (let index = 0; index < trsHovered.length; index++) {
+        const trHovered = trsHovered[index];
+        trHovered.classList.remove("gs-folder-files-table-tr-hover");
+    }
+
+    event.target.closest("tr").classList.add("gs-folder-files-table-tr-hover");
     event.preventDefault();
     var rightClickMenu = document.getElementById("gs-drop-box-right-click-menu");
 
@@ -59,7 +66,7 @@ function showRightClickMenu(event){
     var _docWidth = (document.width !== undefined) ? document.width : document.body.offsetWidth;
 
     rightClickMenu.classList.add("open");
-    var rightClickMenuWidth = 200;
+    var rightClickMenuWidth = 250;
     rightClickMenu.style.top = event.clientY + "px";
     
 
@@ -79,6 +86,11 @@ function fullDocumentClick(event){
     var rightClickMenu = document.getElementById("gs-drop-box-right-click-menu");
     if(!rightClickMenu.contains(event.target)){
         rightClickMenu.classList.remove("open");
+        var trsHovered = document.getElementsByClassName("gs-folder-files-table-tr-hover");
+        for (let index = 0; index < trsHovered.length; index++) {
+            const trHovered = trsHovered[index];
+            trHovered.classList.remove("gs-folder-files-table-tr-hover");
+        }
     }
 }
 
