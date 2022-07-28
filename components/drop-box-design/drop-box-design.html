@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+
         <div class="gs-dropbox-container">
             <div class="gs-dropbox-left" id="gs-dropbox-left">
                 <ul class="gs-dropbox-left-list">
@@ -106,7 +107,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="allowRightClick" oncontextmenu="return false;">
                                 <td>
                                     <div class="fileFolderContainer">
                                         <div class="fileFolderLeft">
@@ -130,7 +131,7 @@
                                     <div class="eclipsis-div">Only you</div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="allowRightClick" oncontextmenu="return false;">
                                 <td>
                                     <div class="fileFolderContainer">
                                         <div class="fileFolderLeft">
@@ -154,14 +155,14 @@
                                     <div class="eclipsis-div">Only you</div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="allowRightClick" oncontextmenu="return false;">
                                 <td>
                                     <div class="fileFolderContainer">
                                         <div class="fileFolderLeft">
                                             <div class="fileFolderIconContainer">
                                                 <img src="svgs/html.svg" class="fileFolderIcon">
                                             </div>
-                                            <div class="fileFolderName eclipsis-div">
+                                            <div class="fileFolderName eclipsis-div" onclick="openFile()">
                                                 File 1.html
                                             </div>
                                         </div>
@@ -256,7 +257,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="allowRightClick" oncontextmenu="return false;">
                             <td>
                                 <div class="fileFolderContainer">
                                     <div class="fileFolderLeft">
@@ -280,7 +281,7 @@
                                 <div class="eclipsis-div">Only you</div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="allowRightClick" oncontextmenu="return false;">
                             <td>
                                 <div class="fileFolderContainer">
                                     <div class="fileFolderLeft">
@@ -304,14 +305,14 @@
                                 <div class="eclipsis-div">Only you</div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="allowRightClick" oncontextmenu="return false;">
                             <td>
                                 <div class="fileFolderContainer">
                                     <div class="fileFolderLeft">
                                         <div class="fileFolderIconContainer">
                                             <img src="svgs/html.svg" class="fileFolderIcon">
                                         </div>
-                                        <div class="fileFolderName eclipsis-div">
+                                        <div class="fileFolderName eclipsis-div" onclick="openFile()">
                                             File 1.html
                                         </div>
                                     </div>
@@ -331,6 +332,36 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="gs-dropbox-file-model" id="gs-dropbox-file-model">
+            <div class="gs-dropbox-file-model-header">
+                <div class="gs-dropbox-file-model-header-file-name">File 1.html</div>
+                <div class="gs-dropbox-file-model-header-close-button" onclick="closeFile()"><img src="svgs/cancel.svg"></div>
+            </div>
+            <div class="gs-dropbox-file-model-content">
+                <div class="gs-dropbox-file-model-content-google-drive-embbed">
+                    <iframe src="https://drive.google.com/file/d/1vqEK_6zfpFHnZuXMJ-Z1lt7SXrELwqTQ/preview" allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="gs-dropbox-file-model-footer">
+                <div class="gs-squareButtonNextPrevious">
+                    <div class="NextPreviousButtonContent"> 
+                        <span class="NextPreviousButtonContentText">Previous</span> 
+                    </div>
+                </div>
+                <div class="gs-squareButtonNextPrevious">
+                    <div class="NextPreviousButtonContent"> 
+                        <span class="NextPreviousButtonContentText">Next</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gs-drop-box-right-click-menu" id="gs-drop-box-right-click-menu">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
         </div>
     </div>
 
