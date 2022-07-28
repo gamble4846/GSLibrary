@@ -13,6 +13,7 @@
     --gs-bropbox-center-bread-crumb-and-layout-button-container-height: 56px;
     --gs-dropbox-center-header-buttons-container-height: 56px;
     --gs-dropbox-center-common-padding: 30px;
+    --gs-dropbox-search-modal-header-height: 50px;
 }
 
 body{
@@ -581,6 +582,59 @@ body{
     cursor: pointer;
 }
 
+.gs-dropbox-search-modal{
+    width: 0;
+    height: calc(100vh - var(--gs-dropbox-nav-bar-height));
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.gs-dropbox-search-modal.open{
+    width: calc(100vw - var(--gs-dropbox-left-width));
+}
+
+.gs-dropbox-search-modal-header{
+    height: var(--gs-dropbox-search-modal-header-height);
+    padding: 20px;
+}
+
+.gs-dropbox-search-modal-content{
+    margin: 20px;
+    height: calc(100% - (var(--gs-dropbox-search-modal-header-height) + (20px * 2) + (20px * 2)));
+    overflow: auto;
+}
+
+.gs-dropbox-searh-result-title{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.gs-dropbox-searh-result-filters-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.gs-dropbox-searh-result-filter{
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f3f0eb;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gs-dropbox-searh-result-filter-down-arrow{
+    width: 15px;
+    height: 15px;
+}
+
 
 @media screen and (max-width: 1050px) {
     .gs-dropbox-right {
@@ -632,6 +686,10 @@ body{
 
     .gs-hamburger-container{
         display: flex;
+    }
+
+    .gs-dropbox-search-modal.open{
+        width: 100vw;
     }
 }
 

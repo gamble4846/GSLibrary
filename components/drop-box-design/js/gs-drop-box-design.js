@@ -1,10 +1,13 @@
 function updateSearchTextBox(flag){
     var container = document.getElementById("gs-dropbox-navbar-right-search-container");
+    var searchModal = document.getElementById("gs-dropbox-search-modal");
     if(flag){
         container.classList.add("active");
+        searchModal.classList.add("open");
     }
     else{
         container.classList.remove("active");
+        searchModal.classList.remove("open");
     }
 }
 
