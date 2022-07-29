@@ -26,8 +26,8 @@
                     <span class="gs-dropbox-cancel-icon-container"><img src="svgs/cancel.svg" class="gs-dropbox-cancel-icon" onclick="updateSearchTextBox(false)"></span>
                 </div>
                 <div class="gs-dropbox-navbar-right-icons-container">
-                    <img src="svgs/questionMark.png" class="gs-dropbox-navbar-right-icon">
-                    <img src="svgs/notificationBell.svg" class="gs-dropbox-navbar-right-icon">
+                    <img src="svgs/questionMakr.svg" class="gs-dropbox-navbar-right-icon">
+                    <img src="svgs/notifcation.svg" class="gs-dropbox-navbar-right-icon">
                     <img src="images/man.jpg" class="gs-dropbox-navbar-right-user-icon gs-image-round ">
                 </div>
             </div>
@@ -66,18 +66,116 @@
                 </div>
                 <div class="gs-dropbox-center-header-buttons-container">
                     <div class="gs-dropbox-center-header-buttons-container-left">
-                        <div class="gs-squareButtonBlue">
+                        <div class="gs-squareButtonBlue" onclick="showUploadDropDown()" id="gs-squareButtonUpload">
                             <div class="uploadButtonContent">
                                 <img src="svgs/closepanel.svg" class="uploadButtonContentUploadIcon hideBefore600"> 
                                 <span class="uploadButtonContentText">Upload</span> 
                                 <img src="svgs/downArrow.svg" class="uploadButtonContentDownArrow">
                             </div>
+                            <div class="gs-drop-down-for-header-buttons" id="gs-drop-down-for-upload-button">
+                                <div class="gs-drop-box-right-click-menu-section">
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-icon">
+                                                <img src="svgs/fileUpload.svg">
+                                            </div>
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Files
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-icon">
+                                                <img src="svgs/folderUpload.svg">
+                                            </div>
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Folders
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="gs-squareButtonGrey">
+                        <div class="gs-squareButtonGrey" onclick="showCreateDropDown()" id="gs-squareButtonCreate">
                             <div class="createButtonContent">
                                 <img src="svgs/plus.svg" class="createButtonContentUploadIcon hideBefore600"> 
                                 <span class="createButtonContentText">Create</span> 
                                 <img src="svgs/downArrow.svg" class="createButtonContentDownArrow">
+                            </div>
+                            <div class="gs-drop-down-for-header-buttons" id="gs-drop-down-for-create-button">
+                                <div class="gs-drop-box-right-click-menu-section">
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-icon">
+                                                <img src="svgs/normalFolder.svg">
+                                            </div>
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Folder
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-icon">
+                                                <img src="svgs/sharedFolder.svg">
+                                            </div>
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Shared folder
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-icon">
+                                                <img src="svgs/automatedFolder.svg">
+                                            </div>
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Automated folder
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Document
+                                            </div>
+                                        </div>
+                                        <div class="gs-drop-box-right-click-menu-button-right">
+                                            <img src="svgs/downArrow.svg" class="gs-drop-box-right-click-menu-arrow">
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Presentation
+                                            </div>
+                                        </div>
+                                        <div class="gs-drop-box-right-click-menu-button-right">
+                                            <img src="svgs/downArrow.svg" class="gs-drop-box-right-click-menu-arrow">
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                Spreadsheet
+                                            </div>
+                                        </div>
+                                        <div class="gs-drop-box-right-click-menu-button-right">
+                                            <img src="svgs/downArrow.svg" class="gs-drop-box-right-click-menu-arrow">
+                                        </div>
+                                    </div>
+                                    <div class="gs-drop-box-right-click-menu-button">
+                                        <div class="gs-drop-box-right-click-menu-button-left">
+                                            <div class="gs-drop-box-right-click-menu-button-left-text">
+                                                More
+                                            </div>
+                                        </div>
+                                        <div class="gs-drop-box-right-click-menu-button-right">
+                                            <img src="svgs/downArrow.svg" class="gs-drop-box-right-click-menu-arrow">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="OnePXBarVerticle"></div>

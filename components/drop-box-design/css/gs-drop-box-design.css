@@ -6,7 +6,7 @@
     --gs-common-border: 1px;
     --gs-dropbox-navbar-right-search-container-width: 40%;
     --gs-dropbox-navbar-right-icons-width: 15%;
-    --gs-dropbox-navbar-right-icon-size: 20px;
+    --gs-dropbox-navbar-right-icon-size: 25px;
     --gs-dropbox-navbar-right-user-icon-size: 30px;
     --gs-right-panel-section-container-height: 56px;
     --gs-right-panel-section-content-header-height: 56px;
@@ -429,8 +429,6 @@ body{
     padding: 0px var(--gs-dropbox-center-common-padding);
     align-items: center;
     justify-content: space-between;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 .uploadButtonContentUploadIcon{
@@ -476,6 +474,7 @@ body{
     cursor: pointer;
     transition: 0.3s ease-in-out;
     margin-right: 16px;
+    position: relative;
 }
 
 .gs-squareButtonBlue:hover{
@@ -489,6 +488,7 @@ body{
     cursor: pointer;
     transition: 0.3s ease-in-out;
     margin-right: 16px;
+    position: relative;
 }
 
 .gs-squareButtonNextPrevious{
@@ -608,6 +608,7 @@ body{
 .gs-drop-box-right-click-menu-button-left-text{
     display: flex;
     align-items: center;
+    color: #1e1919 !important;
 }
 
 .fileFolderContainer{
@@ -783,6 +784,22 @@ body{
     width: var(--gs-drop-box-right-click-menu-width);
     border: 1px solid #c5cedb;
     height: max-content;
+}
+
+.gs-drop-down-for-header-buttons{
+    width: var(--gs-drop-box-right-click-menu-width);
+    height: max-content;
+    background-color: #fbfaf9;
+    border: 1px solid #c5cedb;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    overflow-y: auto;
+    display: none;
+}
+
+.gs-drop-down-for-header-buttons.open{
+    display: block;
 }
 
 @media screen and (max-width: 1050px) {

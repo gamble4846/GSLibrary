@@ -92,7 +92,30 @@ function fullDocumentClick(event){
             trHovered.classList.remove("gs-folder-files-table-tr-hover");
         }
     }
+
+    var uploadButton = document.getElementById("gs-squareButtonUpload");
+    var uploadDropDown = document.getElementById("gs-drop-down-for-upload-button");
+    if(!uploadButton.contains(event.target)){
+        uploadDropDown.classList.remove("open");
+    }
+
+    var createButton = document.getElementById("gs-squareButtonCreate");
+    var createDropDown = document.getElementById("gs-drop-down-for-create-button");
+    if(!createButton.contains(event.target)){
+        createDropDown.classList.remove("open");
+    }
 }
+
+function showUploadDropDown(){
+    var dropDown = document.getElementById("gs-drop-down-for-upload-button");
+    dropDown.classList.add("open");
+}
+
+function showCreateDropDown(){
+    var dropDown = document.getElementById("gs-drop-down-for-create-button");
+    dropDown.classList.add("open");
+}
+
 
 document.addEventListener("DOMContentLoaded", function(event) {
     var rightClickElements = document.getElementsByClassName("allowRightClick");
