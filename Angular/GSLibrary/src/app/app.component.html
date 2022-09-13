@@ -3,7 +3,7 @@
   <hr>
     <h3>gs-carousel</h3>
   <hr>
-    <gs-carousel [carouselData]="carouselData" [hiddenScrollBar]="true" [showButtons]="true" (itemClicked)="carouselItemClicked($event)"></gs-carousel>
+    <gs-carousel [imageSmallHeight]="85" [imageSmallWidth]="150" [imageHeight]="160" [imageWidth]="285" [carouselData]="carouselData" [hiddenScrollBar]="true" [showButtons]="true" (itemClicked)="carouselItemClicked($event)"></gs-carousel>
   <hr>
 </div>
 
@@ -20,7 +20,7 @@
     <h3>gs-modal</h3>
   <hr>
     <button (click)="showGsModal()">Show Modal</button>
-    <gs-modal [showModal]="showModal" (closeModal)="hideModal($event)" modalWidth="800px" modalHeight="500px" modalBackgroundColor="#00000066">
+    <gs-modal [showModal]="showModal" (closeModal)="hideModal($event)" modalWidth="1200px" modalHeight="600px" modalBackgroundColor="#00000066">
       <div header>Header</div>
       <div content>Content</div>
       <div footer>Footer</div>

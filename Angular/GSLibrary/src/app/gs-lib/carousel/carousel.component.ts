@@ -50,10 +50,12 @@ export class CarouselComponent implements OnInit {
     if(this.innerWidth > 650){
       this.mainWidth = this.imageWidth;
       this.mainHeight = this.imageHeight;
+      this.showButtons = true;
     }
     else{
       this.mainWidth = this.imageSmallWidth;
       this.mainHeight = this.imageSmallHeight;
+      this.showButtons = false;
     }
   }
 
