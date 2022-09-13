@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { CarouselModule } from './gs-lib/carousel/carousel.module'
 import { ProductGridModule } from './gs-lib/product-grid/product-grid.module'
+import { ModalModule } from './gs-lib/modal/modal.module'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductGridModule } from './gs-lib/product-grid/product-grid.module'
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    ProductGridModule
+    ProductGridModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

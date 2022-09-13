@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'GSLibrary';
   carouselData:Array<carouselData> = [];
   productGridData:Array<productGridData> = [];
+  showModal:boolean = false;
 
   constructor() { }
 
@@ -111,5 +112,13 @@ export class AppComponent {
 
   productGridItemClicked(event:any){
     console.log(event);
+  }
+
+  showGsModal(){
+    this.showModal = true;
+  }
+
+  hideModal(event:boolean){
+    this.showModal = event;
   }
 }
