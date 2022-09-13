@@ -4,8 +4,8 @@
   </div>
   <div #gsCarouselInnerContainer class="gs-carousel-inner-container" [ngClass]="{'gs-carousel-inner-container-hidden-scrollbar': hiddenScrollBar, 'full-width': !showButtons}">
     <div (click)="cardClicked(data)" class="gs-carousel-card" *ngFor="let data of carouselData">
-      <img [src]="data.imageLink" class="gs-carousel-card-img" [height]="imageHeight" [width]="imageWidth">
-      <div class="gs-carousel-title" [ngStyle]="{'width': imageWidth+'px'}">{{data.title}}</div>
+      <img [src]="data.imageLink" class="gs-carousel-card-img" [height]="mainHeight" [width]="mainWidth">
+      <div class="gs-carousel-title" [ngStyle]="{'width': mainWidth+'px'}">{{data.title}}</div>
     </div>
   </div>
   <div class="gs-carousel-button" (mousedown)="scrollInnerContainer(10)" *ngIf="showButtons">

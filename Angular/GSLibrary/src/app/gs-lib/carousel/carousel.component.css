@@ -1,7 +1,6 @@
 .gs-carousel-container{
   display: flex;
   flex-wrap: nowrap;
-  margin: 10px;
 }
 
 .gs-carousel-card-img{

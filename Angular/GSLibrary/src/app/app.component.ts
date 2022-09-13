@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { carouselData } from './gs-lib/carousel/carouselData.model';
+import { productGridData } from './gs-lib/product-grid/productGridData.model';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,13 @@ import { carouselData } from './gs-lib/carousel/carouselData.model';
 export class AppComponent {
   title = 'GSLibrary';
   carouselData:Array<carouselData> = [];
+  productGridData:Array<productGridData> = [];
 
   constructor() { }
 
   ngOnInit(): void {
     this.CreateCarouselData();
+    this.CreateProductGridData();
   }
 
   CreateCarouselData(){
@@ -42,6 +45,71 @@ export class AppComponent {
   }
 
   carouselItemClicked(event:any){
+    console.log(event);
+  }
+
+  CreateProductGridData(){
+    this.productGridData.push(
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "1",
+        id: "string1",
+        headOne: "1",
+        headTwo: "1"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "2",
+        id: "string2",
+        headOne: "2",
+        headTwo: "2"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "3",
+        id: "string3",
+        headOne: "3",
+        headTwo: "3"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "4",
+        id: "string4",
+        headOne: "4",
+        headTwo: "4"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "5",
+        id: "string5",
+        headOne: "5",
+        headTwo: "5"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "3",
+        id: "string3",
+        headOne: "3",
+        headTwo: "3"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "4",
+        id: "string4",
+        headOne: "4",
+        headTwo: "4"
+      },
+      {
+        imageLink : "https://images.unsplash.com/photo-1531328552016-28615c8ea91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFydGljbGV8ZW58MHx8MHx8&w=1000&q=80",
+        title : "5",
+        id: "string5",
+        headOne: "5",
+        headTwo: "5"
+      },
+    );
+  }
+
+  productGridItemClicked(event:any){
     console.log(event);
   }
 }

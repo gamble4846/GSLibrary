@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { carouselData } from './carouselData.model';
 
 @Component({
@@ -13,6 +13,8 @@ export class CarouselComponent implements OnInit {
   @Input() hiddenScrollBar:boolean = false;
   @Input() imageHeight:number = 100;
   @Input() imageWidth:number = 200;
+  @Input() imageSmallHeight:number = 80;
+  @Input() imageSmallWidth:number = 160;
   @Input() showButtons:boolean = true;
   //------------------------------------------------------
 
@@ -24,10 +26,35 @@ export class CarouselComponent implements OnInit {
   @Output() itemClicked = new EventEmitter<String>();
   //---------------------------------------------------------------
 
+  //---------- GLOBALS -----------------------------------
+  mainWidth:number = 0;
+  mainHeight:number = 0;
+  innerWidth:number = 0;
+  //------------------------------------------------------
+
   constructor() { }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.updateImageWH();
+  }
+
+
   ngOnInit(): void {
-    console.log(this.carouselData);
+    this.updateImageWH();
+  }
+
+  updateImageWH(){
+    this.innerWidth = window.innerWidth;
+    console.log(this.innerWidth);
+    if(this.innerWidth > 650){
+      this.mainWidth = this.imageWidth;
+      this.mainHeight = this.imageHeight;
+    }
+    else{
+      this.mainWidth = this.imageSmallWidth;
+      this.mainHeight = this.imageSmallHeight;
+    }
   }
 
   ngAfterViewInit():void{
