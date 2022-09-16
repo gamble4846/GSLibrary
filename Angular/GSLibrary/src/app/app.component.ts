@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { carouselData } from './gs-lib/carousel/carouselData.model';
 import { productGridData } from './gs-lib/product-grid/productGridData.model';
+import { option, selectData } from './gs-lib/select/selectData.model';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +13,16 @@ export class AppComponent {
   carouselData:Array<carouselData> = [];
   productGridData:Array<productGridData> = [];
   showModal:boolean = false;
+  selectData:Array<option> = [];
+  selectDataParentChild:Array<selectData> = [];
 
   constructor() { }
 
   ngOnInit(): void {
     this.CreateCarouselData();
     this.CreateProductGridData();
+    this.CreateSelectData();
+    this.CreateSelectDataParentChild();
   }
 
   CreateCarouselData(){
@@ -121,4 +126,71 @@ export class AppComponent {
   hideModal(event:boolean){
     this.showModal = event;
   }
+
+  CreateSelectData(){
+    this.selectData = [
+      {value: "1", text: "1"},
+      {value: "2", text: "2"},
+      {value: "3", text: "3"},
+      {value: "4", text: "4"},
+      {value: "5", text: "5"},
+      {value: "6", text: "6"},
+      {value: "7", text: "7"},
+      {value: "8", text: "8"},
+      {value: "9", text: "9"},
+      {value: "10", text: "10"},
+      {value: "11", text: "11"},
+      {value: "12", text: "12"},
+      {value: "13", text: "13"},
+      {value: "14", text: "14"},
+    ];
+  }
+
+  CreateSelectDataParentChild(){
+    let parent1:option = {
+      text: "p1",
+      value: "vp1"
+    }
+
+    let parent2:option = {
+      text: "p2",
+      value: "vp2"
+    }
+
+    let chid1:option = {
+      text: "c1",
+      value: "vc1"
+    }
+
+    let chid2:option = {
+      text: "c2",
+      value: "vc2"
+    }
+
+    let chid3:option = {
+      text: "c3",
+      value: "vc3"
+    }
+
+    let chid4:option = {
+      text: "c4",
+      value: "vc4"
+    }
+
+    this.selectDataParentChild = [
+      {
+        parent: parent1,
+        children: [
+          chid1,chid2
+        ]
+      },
+      {
+        parent: parent2,
+        children: [
+          chid3,chid4
+        ]
+      }
+    ];
+  }
+
 }

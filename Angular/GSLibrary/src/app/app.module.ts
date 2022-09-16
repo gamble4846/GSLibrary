@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CarouselModule } from './gs-lib/carousel/carousel.module'
 import { ProductGridModule } from './gs-lib/product-grid/product-grid.module'
 import { ModalModule } from './gs-lib/modal/modal.module'
+import { SelectModule } from './gs-lib/select/select.module'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ModalModule } from './gs-lib/modal/modal.module'
     AppRoutingModule,
     CarouselModule,
     ProductGridModule,
-    ModalModule
+    ModalModule,
+    SelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
