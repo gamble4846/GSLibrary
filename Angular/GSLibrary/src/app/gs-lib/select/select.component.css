@@ -62,6 +62,8 @@
 
 .optionCheckbox{
   padding: 0px 5px;
+  display: flex;
+  align-items: center;
 }
 
 .selectDropDownContainer::-webkit-scrollbar {
@@ -110,24 +112,74 @@
 }
 
 .childrenOptionsContainer{
-  padding-left: 10px;
-  width: calc(100% - 10px);
+  padding-left: 20px;
+  width: calc(100% - 20px);
 }
 
 .searchContainer{
   padding: 5px 10px;
-  width: calc(100% - 20px);
+  width: calc(100% - (20px));
+  display: flex;
+  align-items: center;
 }
 
 .searchTextBox{
-  width: calc(100% - 20px);
+  width: calc(100% - (20px + 30px));
   border: 1px solid rgb(232, 232, 232);
+  border-right: 0px;
   font-size: 15px;
   outline: none;
   height: 30px;
   padding: 0px 10px;
+  display: block;
+}
+
+.searchIconContainer{
+  border: 1px solid rgb(232, 232, 232);
+  border-left: 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchIconContainer svg{
+  fill: #a1a1a1;
 }
 
 .placeHolderContainer{
   color: #a1a1a1;
+}
+
+.optionCheck{
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(232, 232, 232);
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  outline: none;
+  -webkit-appearance: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.optionCheck:checked {
+  background-color: #0E9700;
+}
+
+.optionCheck::before{
+  font-size: calc(((var(--checkboxSize-gs-checkbox)/2) + (var(--checkboxSize-gs-checkbox)/5)));
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.optionCheck:checked::before{
+  content: "✔";
 }
