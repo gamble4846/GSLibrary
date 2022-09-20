@@ -1,4 +1,4 @@
-<div class="modal-container" [ngStyle]="{'width': mainWidth, 'height': mainHeight, 'border-radius': modalBorderRadius, 'transition': modalTransition}">
+<div class="modal-container" [ngStyle]="{'width': mainWidth, 'height': mainHeight, 'border-radius': modalBorderRadius, 'transition': modalTransition, 'z-index': modalZIndex}">
   <div class="modal-header" [ngStyle]="{'height': headerHeight + '%'}" *ngIf="showHeader">
     <div class="modal-inner-header">
       <ng-content select="[header]"></ng-content>
@@ -13,4 +13,4 @@
   </div>
 </div>
 
-<div class="modal-back" [ngStyle]="{'background-color': modalBackgroundColor, 'transition': modalBackTransition}" (click)="closeModalFUN('closedFromClickingOutside')" [ngClass]="{'show': showModal}"></div>
+<div class="modal-back" [ngStyle]="{'background-color': modalBackgroundColor, 'transition': modalBackTransition, 'z-index': (modalZIndex - 1)}" (click)="closeModalFUN('closedFromClickingOutside')" [ngClass]="{'show': showModal}"></div>

@@ -19,6 +19,7 @@ export class ModalComponent implements OnInit {
   @Input() showHeader:boolean = true;
   @Input() showFooter:boolean = true;
   @Input() transitionTime:number = 0.8;
+  @Input() modalZIndex:number = 20;
   //-----------------------------------------------------
 
   //------------------- GLOBALS ---------------------------
