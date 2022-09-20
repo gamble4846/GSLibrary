@@ -123,8 +123,11 @@ export class AppComponent {
     this.showModal = true;
   }
 
-  hideModal(event:boolean){
-    this.showModal = event;
+  hideModal(event:any){
+    console.log(event);
+    if(event){
+      this.showModal = false;
+    }
   }
 
   CreateSelectData(){
