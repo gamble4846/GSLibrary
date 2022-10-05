@@ -12,6 +12,14 @@
   padding: 0px 10px;
 }
 
+.outerSelectedTabsContainer{
+  width: max-content;
+}
+
+.selectedTabText{
+  white-space: nowrap;
+}
+
 .selectTextBoxData{
   width: 90%;
   overflow: hidden;

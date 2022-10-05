@@ -30,6 +30,6 @@
 
 
 
-<div style="width: 50%;">
-  <gs-select [selectDataParentChild]="selectDataParentChild" [selectData]="selectData" [showAllCheckbox]="true" [allowMultiSelect]="true" [isParentChild]="true" [showSearch]="true"></gs-select>
+<div style="width: 100%; margin-bottom: 1500px;">
+  <gs-select (DropDownChanged)="dropDownChanged($event)" [selectDataParentChild]="selectDataParentChild" [selectData]="selectData" [showAllCheckbox]="true" [allowMultiSelect]="true" [isParentChild]="false" [showSearch]="true"></gs-select>
 </div>

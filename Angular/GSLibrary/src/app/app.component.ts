@@ -196,4 +196,7 @@ export class AppComponent {
     ];
   }
 
+  dropDownChanged(event:any){
+    //console.log(event);
+  }
 }
