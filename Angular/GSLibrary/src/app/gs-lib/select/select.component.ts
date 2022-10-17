@@ -55,6 +55,11 @@ export class SelectComponent implements OnInit {
     this.showHideDropDown();
   }
 
+  toggleDropDown(){
+    this.showDD = !this.showDD ;
+    this.showHideDropDown();
+  }
+
   hideDropDown(){
     this.showDD = false;
     this.showHideDropDown();
