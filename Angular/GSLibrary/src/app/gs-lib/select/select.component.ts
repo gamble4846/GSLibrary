@@ -18,6 +18,8 @@ export class SelectComponent implements OnInit {
   @Input() showSearch:boolean = false;
   @Input() searchPlaceholder:string = "Search...";
   @Input() selectPlaceholder:string = "Select Options";
+  @Input() responsiveOptionHiding:boolean = true;
+  @Input() hideOptionsAfter:number = 0;
   //------------------------------------------------------
 
   //------------------- View Childs ---------------------------
@@ -135,44 +137,63 @@ export class SelectComponent implements OnInit {
   }
 
   UpdateOnlyCheckedAccordingToWidth(){
-    setTimeout(() => {
+    if(this.responsiveOptionHiding){
+      setTimeout(() => {
+        if(this.onlyChecked.length > 0){
+          let selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
+          let mainWidth = this.selectContainer.nativeElement.offsetWidth;
+  
+          let otherOption:option = {
+            value: "G-Hide",
+            text: "and ",
+          }
+  
+          if(selectedListWidth > mainWidth){
+            this.onlyChecked.pop();
+            this.removedTags++;
+            otherOption.text = "and " + this.removedTags + " more..."
+            this.onlyChecked.push(otherOption);
+            this.onlyChecked = [...this.onlyChecked];
+            setTimeout(() => {
+              selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
+              mainWidth = this.selectContainer.nativeElement.offsetWidth;
+  
+              if(selectedListWidth > mainWidth){
+                this.onlyChecked.pop();
+                this.onlyChecked = [...this.onlyChecked]
+                this.UpdateOnlyCheckedAccordingToWidth();
+              }
+            }, 10);
+          }
+          else if(this.removedTags > 0){
+            this.onlyChecked.pop();
+            this.onlyChecked.pop();
+            this.onlyChecked.pop();
+            this.removedTags += 3;
+            otherOption.text = "and " + this.removedTags + " more..."
+            this.onlyChecked.push(otherOption);
+            this.onlyChecked = [...this.onlyChecked];
+          }
+        }
+      }, 10);
+    }
+    else if(this.hideOptionsAfter > 0){
       if(this.onlyChecked.length > 0){
-        let selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
-        let mainWidth = this.selectContainer.nativeElement.offsetWidth;
+        let removedOptionsCount = this.onlyChecked.length - this.hideOptionsAfter;
+        this.onlyChecked = this.onlyChecked.slice(0, this.hideOptionsAfter);
 
-        let otherOption:option = {
-          value: "G-Hide",
-          text: "and ",
-        }
-
-        if(selectedListWidth > mainWidth){
-          this.onlyChecked.pop();
-          this.removedTags++;
-          otherOption.text = "and " + this.removedTags + " more..."
-          this.onlyChecked.push(otherOption);
-          this.onlyChecked = [...this.onlyChecked];
-          setTimeout(() => {
-            selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
-            mainWidth = this.selectContainer.nativeElement.offsetWidth;
-
-            if(selectedListWidth > mainWidth){
-              this.onlyChecked.pop();
-              this.onlyChecked = [...this.onlyChecked]
-              this.UpdateOnlyCheckedAccordingToWidth();
-            }
-          }, 10);
-        }
-        else if(this.removedTags > 0){
-          this.onlyChecked.pop();
-          this.onlyChecked.pop();
-          this.onlyChecked.pop();
-          this.removedTags += 3;
-          otherOption.text = "and " + this.removedTags + " more..."
+        if(removedOptionsCount > 0){
+          let otherOption:option = {
+            value: "G-Hide",
+            text: "and ",
+          }
+  
+          otherOption.text = "and " + removedOptionsCount + " more..."
           this.onlyChecked.push(otherOption);
           this.onlyChecked = [...this.onlyChecked];
         }
       }
-    }, 10);
+    }
   }
 
   updateChildrenCheckboxAccordingToParent(){
