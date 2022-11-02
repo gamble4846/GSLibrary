@@ -162,22 +162,26 @@ export class AppComponent {
 
     let chid1:option = {
       text: "c1",
-      value: "vc1"
+      value: "vc1",
+      checked: true
     }
 
     let chid2:option = {
       text: "c2",
-      value: "vc2"
+      value: "vc2",
+      checked: true
     }
 
     let chid3:option = {
       text: "c3",
-      value: "vc3"
+      value: "vc3",
+      checked: true
     }
 
     let chid4:option = {
       text: "c4",
-      value: "vc4"
+      value: "vc4",
+      checked: true
     }
 
     let chid5:option = {
@@ -205,13 +209,13 @@ export class AppComponent {
       {
         parent: parent1,
         children: [
-          chid1,chid2,chid5,chid6
+          chid1,chid2
         ]
       },
       {
         parent: parent2,
         children: [
-          chid3,chid4,chid7,chid8
+          chid3,chid4
         ]
       }
     ];

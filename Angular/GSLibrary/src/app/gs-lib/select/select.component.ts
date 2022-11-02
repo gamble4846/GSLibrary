@@ -43,6 +43,12 @@ export class SelectComponent implements OnInit {
   ngOnInit(): void {
     this.dropDownChanged(false);
     this.searchValueChanged();
+    if(this.isParentChild){
+      for (let index = 0; index < this.selectDataParentChild.length; index++) {
+        const pcData = this.selectDataParentChild[index];
+        this.ChildrenChanged(index,0);
+      }
+    }
   }
 
   ngOnChanges() {
@@ -173,9 +179,6 @@ export class SelectComponent implements OnInit {
     this.selectDataParentChild.forEach((fullOption:selectData) => {
       this.setAllChildrenAsChecked(fullOption);
     });
-
-    console.log(this.selectDataParentChild);
-
     this.dropDownChanged();
   }
 
