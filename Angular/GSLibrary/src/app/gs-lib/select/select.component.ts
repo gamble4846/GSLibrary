@@ -41,7 +41,6 @@ export class SelectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.selectData);
     this.dropDownChanged(false);
     this.searchValueChanged();
   }
@@ -160,7 +159,8 @@ export class SelectComponent implements OnInit {
         else if(this.removedTags > 0){
           this.onlyChecked.pop();
           this.onlyChecked.pop();
-          this.removedTags += 2;
+          this.onlyChecked.pop();
+          this.removedTags += 3;
           otherOption.text = "and " + this.removedTags + " more..."
           this.onlyChecked.push(otherOption);
           this.onlyChecked = [...this.onlyChecked];

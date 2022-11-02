@@ -141,11 +141,11 @@ export class AppComponent {
       {value: "7", text: "7"},
       {value: "8", text: "8"},
       {value: "9", text: "9"},
-      {value: "10", text: "10"},
-      {value: "11", text: "11"},
-      {value: "12", text: "12"},
-      {value: "13", text: "13"},
-      {value: "14", text: "14"},
+      {value: "10", text: "10", checked: true},
+      {value: "11", text: "11", checked: true},
+      {value: "12", text: "12", checked: true},
+      {value: "13", text: "13", checked: true},
+      {value: "14", text: "14", checked: true},
     ];
   }
 
@@ -180,17 +180,38 @@ export class AppComponent {
       value: "vc4"
     }
 
+    let chid5:option = {
+      text: "c5",
+      value: "vc5"
+    }
+
+    let chid6:option = {
+      text: "c6",
+      value: "vc6"
+    }
+
+    let chid7:option = {
+      text: "c7",
+      value: "vc7"
+    }
+
+    let chid8:option = {
+      text: "c8",
+      value: "vc8"
+    }
+
+
     this.selectDataParentChild = [
       {
         parent: parent1,
         children: [
-          chid1,chid2
+          chid1,chid2,chid5,chid6
         ]
       },
       {
         parent: parent2,
         children: [
-          chid3,chid4
+          chid3,chid4,chid7,chid8
         ]
       }
     ];
