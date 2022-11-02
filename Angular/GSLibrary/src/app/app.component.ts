@@ -174,14 +174,12 @@ export class AppComponent {
 
     let chid3:option = {
       text: "c3",
-      value: "vc3",
-      checked: true
+      value: "vc3"
     }
 
     let chid4:option = {
       text: "c4",
-      value: "vc4",
-      checked: true
+      value: "vc4"
     }
 
     let chid5:option = {
