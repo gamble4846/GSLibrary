@@ -48,7 +48,7 @@ export class SelectComponent implements OnInit {
     if(this.isParentChild){
       for (let index = 0; index < this.selectDataParentChild.length; index++) {
         const pcData = this.selectDataParentChild[index];
-        this.ChildrenChanged(index,0);
+        this.ChildrenChanged(index, 0, false);
       }
     }
   }
@@ -275,7 +275,7 @@ export class SelectComponent implements OnInit {
     this.allCheckBoxChanged();
   }
 
-  ChildrenChanged(parentIndex:number,childIndex:number){
+  ChildrenChanged(parentIndex:number,childIndex:number,emitChanged:boolean = true){
     let allChildrenChecked = this.checkIfAllChildrenAreChecked(parentIndex);
     if(allChildrenChecked){
       this.selectDataParentChild[parentIndex].parent.checked = true;
@@ -283,7 +283,9 @@ export class SelectComponent implements OnInit {
     else{
       this.selectDataParentChild[parentIndex].parent.checked = false;
     }
-    this.dropDownChanged();
+    if (emitChanged) {
+      this.dropDownChanged();
+    }
   }
 
   checkIfAllChildrenAreChecked(parentIndex:number) : boolean{
