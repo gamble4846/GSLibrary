@@ -65,7 +65,7 @@
         <div class="parentOptionContainer"  *ngIf="option.parent.search">
           <div class="optionContainer" (click)="updateChildrenCheckboxAccordingToParentClick(parentIndex)">
             <div class="optionCheckbox" *ngIf="allowMultiSelect">
-              <input type="checkbox" class="optionCheck" [(ngModel)]="option.parent.checked" (ngModelChange)="updateChildrenCheckboxAccordingToParent()">
+              <input type="checkbox" class="optionCheck" [(ngModel)]="option.parent.checked" (ngModelChange)="updateChildrenCheckboxAccordingToParent(parentIndex)">
             </div>
             <div class="optionText">
               {{option.parent.text}}

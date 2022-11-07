@@ -31,5 +31,5 @@
 
 
 <div style="width: 100%; margin-bottom: 1500px;">
-  <gs-select (DropDownChanged)="dropDownChanged($event)" [hideOptionsAfter]="4" [responsiveOptionHiding]="false" [selectDataParentChild]="selectDataParentChild" [selectData]="selectData" [showAllCheckbox]="true" [allowMultiSelect]="true" [isParentChild]="true" [showSearch]="true"></gs-select>
+  <gs-select [KeepParentChildSeparate]="true" (DropDownChanged)="dropDownChanged($event)" [hideOptionsAfter]="4" [responsiveOptionHiding]="false" [selectDataParentChild]="selectDataParentChild" [selectData]="selectData" [showAllCheckbox]="true" [allowMultiSelect]="true" [isParentChild]="true" [showSearch]="true"></gs-select>
 </div>

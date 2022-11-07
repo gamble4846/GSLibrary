@@ -20,6 +20,7 @@ export class SelectComponent implements OnInit {
   @Input() selectPlaceholder:string = "Select Options";
   @Input() responsiveOptionHiding:boolean = true;
   @Input() hideOptionsAfter:number = 0;
+  @Input() KeepParentChildSeparate:boolean = false;
   //------------------------------------------------------
 
   //------------------- View Childs ---------------------------
@@ -142,12 +143,12 @@ export class SelectComponent implements OnInit {
         if(this.onlyChecked.length > 0){
           let selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
           let mainWidth = this.selectContainer.nativeElement.offsetWidth;
-  
+
           let otherOption:option = {
             value: "G-Hide",
             text: "and ",
           }
-  
+
           if(selectedListWidth > mainWidth){
             this.onlyChecked.pop();
             this.removedTags++;
@@ -157,7 +158,7 @@ export class SelectComponent implements OnInit {
             setTimeout(() => {
               selectedListWidth = this.outerSelectedTabsContainer.nativeElement.offsetWidth;
               mainWidth = this.selectContainer.nativeElement.offsetWidth;
-  
+
               if(selectedListWidth > mainWidth){
                 this.onlyChecked.pop();
                 this.onlyChecked = [...this.onlyChecked]
@@ -187,7 +188,7 @@ export class SelectComponent implements OnInit {
             value: "G-Hide",
             text: "and ",
           }
-  
+
           otherOption.text = "and " + removedOptionsCount + " more..."
           this.onlyChecked.push(otherOption);
           this.onlyChecked = [...this.onlyChecked];
@@ -196,10 +197,15 @@ export class SelectComponent implements OnInit {
     }
   }
 
-  updateChildrenCheckboxAccordingToParent(){
+  updateChildrenCheckboxAccordingToParentAll(){
     this.selectDataParentChild.forEach((fullOption:selectData) => {
       this.setAllChildrenAsChecked(fullOption);
     });
+    this.dropDownChanged();
+  }
+
+  updateChildrenCheckboxAccordingToParent(parentIndex:any){
+    this.setAllChildrenAsChecked(this.selectDataParentChild[parentIndex]);
     this.dropDownChanged();
   }
 
@@ -219,7 +225,7 @@ export class SelectComponent implements OnInit {
     //------ selectDataParentChild ---------
     if(this.isParentChild){
       this.selectDataParentChild.map((x:selectData) => x.parent.checked = this.allCheckBox);
-      this.updateChildrenCheckboxAccordingToParent();
+      this.updateChildrenCheckboxAccordingToParentAll();
       this.dropDownChanged();
     }
     //---------------------------
@@ -302,7 +308,7 @@ export class SelectComponent implements OnInit {
 
   updateChildrenCheckboxAccordingToParentClick(parentIndex:number){
     this.selectDataParentChild[parentIndex].parent.checked = !this.selectDataParentChild[parentIndex].parent.checked;
-    this.updateChildrenCheckboxAccordingToParent();
+    this.updateChildrenCheckboxAccordingToParent(parentIndex);
   }
 
   ChildrenChangedClick(parentIndex:number,childIndex:number){
