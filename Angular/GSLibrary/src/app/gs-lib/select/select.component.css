@@ -1,3 +1,15 @@
+.selectContainer.disabled {
+  cursor: not-allowed;
+}
+.selectContainer.disabled .selectTextBoxContainer,
+.selectContainer.disabled .selectDropDownContainer{
+  pointer-events: none;
+}
+
+.selectContainer.disabled .selectTextBoxContainer{
+  background-color: #ebebeb;
+}
+
 .selectTextBoxContainer{
   border: 1px solid rgb(203, 203, 203);;
   min-height: 30px;

@@ -21,6 +21,7 @@ export class SelectComponent implements OnInit {
   @Input() responsiveOptionHiding:boolean = true;
   @Input() hideOptionsAfter:number = 0;
   @Input() KeepParentChildSeparate:boolean = false;
+  @Input() disabled:boolean = false;
   //------------------------------------------------------
 
   //------------------- View Childs ---------------------------

@@ -1,4 +1,4 @@
-<div class="selectContainer" #selectContainer>
+<div class="selectContainer" #selectContainer  [ngClass]="{'disabled': disabled}">
   <div class="selectTextBoxContainer" (click)="toggleDropDown()">
     <div class="selectTextBoxData">
       <div class="outerSelectedTabsContainer" #outerSelectedTabsContainer>
